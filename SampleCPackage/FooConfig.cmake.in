@@ -1,0 +1,18 @@
+# - Config file for the FOO package
+# It defines the following variables
+#  FOO_INCLUDE_DIRS - include directories for FOO
+#  FOO_LIBRARIES    - libraries to link against
+#  FOO_EXECUTABLE   - the bar executable
+ 
+# Compute paths
+get_filename_component(FOO_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(FOO_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+list(APPEND FOO_INCLUDE_DIRS "${FOO_CMAKE_DIR}/../Foo/")
+ 
+# Our library dependencies (contains definitions for IMPORTED targets)
+if(NOT TARGET foo AND NOT FOO_BINARY_DIR)
+  include("${FOO_CMAKE_DIR}/FooTargets.cmake")
+endif()
+ 
+# These are IMPORTED targets created by FOOTargets.cmake
+set(FOO_LIBRARIES Foo)

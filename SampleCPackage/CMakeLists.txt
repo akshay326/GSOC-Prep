@@ -24,6 +24,10 @@ foreach(p LIB BIN INCLUDE CMAKE)
     endif()
 endforeach()
 
+if (ANDROID)
+    message(STATUS "Hello from Android build!")
+endif()
+
 # set up include-directories
 include_directories(
         "${PROJECT_SOURCE_DIR}"   # to find Foo/hello.h

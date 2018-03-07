@@ -251,10 +251,17 @@ set(ANDROID_DEFAULT_NDK_API_LEVEL_x86_64 21)
 set(ANDROID_DEFAULT_NDK_API_LEVEL_mips 9)
 set(ANDROID_DEFAULT_NDK_API_LEVEL_mips64 21)
 
-# TODO Remove this macro. I added it just for debugging
+# NOTE Remove this macro. I added it just for debugging
 # Used when debugging cmake code
 macro(_LOG_INFO _line)
     message("\n#### ${_line}\n")
+endmacro()
+
+# NOTE Remove this macro. I added it just for debugging
+# Correct usage: _PRINT_LEN_OF(list_name) , without {}
+macro(_PRINT_LEN_OF _list)
+    list(LENGTH ${_list} len)
+    _LOG_INFO(${len})
 endmacro()
 
 macro(__LIST_FILTER listvar regex)
@@ -313,10 +320,10 @@ macro(__INIT_VARIABLE var_name)
     unset(__test_path)
 endmacro()
 
-# I guess this should store a list of numbers: 19,21,24 - the supported API versions, in _var
+# I guess this should append a list of numbers: 19,21,24 - the supported API versions, to list _var
 macro(__DETECT_NATIVE_API_LEVEL _var _path)
 
-    # NOTE: Changed to regex "^[\t ]*#define[\t ]+__ANDROID_API__[\t ]+([0-9]+)[\t ]*.*$"
+    # NOTE: Changed from regex "^[\t ]*#define[\t ]+__ANDROID_API__[\t ]+([0-9]+)[\t ]*.*$"
     # to regex [ \t]*^#define[ \t]+__ANDROID_API_[A-Z]_.*[0-9]+$
     set(__ndkApiLevelRegex "^[ \t]*^#define[ \t]+__ANDROID_API_[A-Z]_.*[0-9]+$")
     file(STRINGS ${_path} __apiFileContent REGEX "${__ndkApiLevelRegex}")
@@ -324,9 +331,17 @@ macro(__DETECT_NATIVE_API_LEVEL _var _path)
         message(SEND_ERROR "Could not get Android native API level. Probably you have specified invalid level value, or your copy of NDK/toolchain is broken.")
     endif ()
 
-        _LOG_INFO(${__apiFileContent})
-        _LOG_INFO(${_var})
-    string(REGEX REPLACE "${__ndkApiLevelRegex}" "\\1" ${_var} "${__apiFileContent}")
+    #    NOTE : Substituted regex by simple string operations
+    #    string(REGEX REPLACE "${__ndkApiLevelRegex}" "\\1" ${_var} "${__apiFileContent}")
+
+    #   Get the last word from the line(usually the API number like 9, 14) and append to _var
+        foreach(TEMP_LINE ${__apiFileContent})
+            string(REPLACE " " ";" TEMP_LIST ${TEMP_LINE})
+            list(REVERSE TEMP_LIST)
+            list(GET TEMP_LIST 0 last_word)
+            list(APPEND _var last_word)
+        endforeach()
+
     unset(__apiFileContent)
     unset(__ndkApiLevelRegex)
 endmacro()
@@ -521,6 +536,15 @@ if (BUILD_WITH_STANDALONE_TOOLCHAIN)
     __DETECT_NATIVE_API_LEVEL(ANDROID_SUPPORTED_NATIVE_API_LEVELS "${ANDROID_STANDALONE_TOOLCHAIN}/sysroot/usr/include/android/api-level.h")
     set(ANDROID_STANDALONE_TOOLCHAIN_API_LEVEL ${ANDROID_SUPPORTED_NATIVE_API_LEVELS})
     set(__availableToolchains "standalone")
+
+#    NOTE: After a few line below, u'll find lines like:
+#    set(ANDROID_SUPPORTED_ABIS "")
+#    set(__uniqToolchainArchNames ${__availableToolchainArchs})
+#    list(REMOVE_DUPLICATES __uniqToolchainArchNames) ...
+#
+#    __availableToolchainArchs must be a list to execute above operation
+#    So __DETECT_TOOLCHAIN_MACHINE_NAME must return a list of names
+
     __DETECT_TOOLCHAIN_MACHINE_NAME(__availableToolchainMachines "${ANDROID_STANDALONE_TOOLCHAIN}")
     if (NOT __availableToolchainMachines)
         message(FATAL_ERROR "Could not determine machine name of your toolchain. Probably your Android standalone toolchain is broken.")
@@ -825,15 +849,24 @@ list(FIND ANDROID_SUPPORTED_NATIVE_API_LEVELS "${ANDROID_NATIVE_API_LEVEL}" __le
 if (__levelIdx EQUAL -1)
     message(SEND_ERROR "Specified Android native API level 'android-${ANDROID_NATIVE_API_LEVEL}' is not supported by your NDK/toolchain.")
 else ()
-    if (BUILD_WITH_ANDROID_NDK)
-        # TODO Remove this debug line
-        _LOG_INFO("Calling from section BUILD_WITH_ANDROID_NDK")
-        __DETECT_NATIVE_API_LEVEL(__realApiLevel "${ANDROID_NDK}/platforms/android-${ANDROID_NATIVE_API_LEVEL}/arch-${ANDROID_ARCH_NAME}/usr/include/android/api-level.h")
-        if (NOT __realApiLevel EQUAL ANDROID_NATIVE_API_LEVEL AND NOT __realApiLevel GREATER 9000)
-            message(SEND_ERROR "Specified Android API level (${ANDROID_NATIVE_API_LEVEL}) does not match to the level found (${__realApiLevel}). Probably your copy of NDK is broken.")
-        endif ()
-        unset(__realApiLevel)
-    endif ()
+#    NOTE: Commented This section altogether. I guess its redundant searching and finding
+#    if (BUILD_WITH_ANDROID_NDK)
+#        _LOG_INFO("Calling from section BUILD_WITH_ANDROID_NDK")
+#
+##         NOTE Changed this line. The path for search was incorrect
+##        __DETECT_NATIVE_API_LEVEL(__realApiLevel "${ANDROID_NDK}/platforms/android-${ANDROID_NATIVE_API_LEVEL}/arch-${ANDROID_ARCH_NAME}/usr/include/android/api-level.h")
+#        __DETECT_NATIVE_API_LEVEL(__realApiLevel "${ANDROID_NDK}/sysroot/usr/include/android/api-level.h")
+#
+##       Don't know why? api-level.h will return a list of strings
+##       So we should use FIND instead of equal here
+#
+#        list(FIND __realApiLevel "${ANDROID_NATIVE_API_LEVEL}" __levelIdx2)
+#        if (__levelIdx2 EQUAL -1)
+#            message(SEND_ERROR "Specified Android API level (${ANDROID_NATIVE_API_LEVEL}) does not matches any of the levels found. Probably your copy of NDK is broken.")
+#        endif ()
+#        unset(__realApiLevel)
+#        unset(__levelIdx2)
+#    endif ()
     set(ANDROID_NATIVE_API_LEVEL "${ANDROID_NATIVE_API_LEVEL}" CACHE STRING "Android API level for native code" FORCE)
     set(CMAKE_ANDROID_API ${ANDROID_NATIVE_API_LEVEL})
     if (CMAKE_VERSION VERSION_GREATER "2.8")

@@ -27,3 +27,4 @@ Your directory structure should be like:
 ```
 ### Few errors
 + Initially while building I got some api-level.h related error. There was some regex expression error(I guess the NDK files have changed since old revisions)
++ On the [official developer pagge](https://developer.android.com/ndk/guides/cpp-support.html), it clearly mentioned that LLVM's libc++ or c++_static/shared should be prefered as a runtime. This will be the only STL supported in future for NDK.

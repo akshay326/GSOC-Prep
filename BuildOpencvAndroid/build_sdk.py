@@ -76,11 +76,6 @@ class ABI:
         return self.name == "x86" or self.name == "x86_64"
 
 ABIs = [
-    ABI("5", "x86_64",      "x86_64-4.9")
-]
-'''
-Todo: akshay commented this
-ABIs = [
     ABI("2", "armeabi-v7a", "arm-linux-androideabi-4.8", cmake_name="armeabi-v7a with NEON"),
     ABI("1", "armeabi",     "arm-linux-androideabi-4.8"),
     ABI("3", "arm64-v8a",   "aarch64-linux-android-4.9"),
@@ -89,7 +84,6 @@ ABIs = [
     ABI("7", "mips64",      "mips64el-linux-android-4.9"),
     ABI("6", "mips",        "mipsel-linux-android-4.8")
 ]
-'''
 
 #===================================================================================================
 
@@ -106,15 +100,8 @@ class Builder:
         self.engine_version = determine_engine_version(os.path.join(self.opencvdir, "platforms", "android", "service", "engine", "AndroidManifest.xml"))
         self.use_ccache = True
 
-
     def get_toolchain_file(self):
-        return os.path.join(self.workdir,"android.toolchain.cmake")
-	'''
-	TODO akshay commented this
-	Use the toolchain.cmake in the current directory rather than opencv one
-		def get_toolchain_file(self):
-		    return os.path.join(self.opencvdir, "platforms", "android", "android.toolchain.cmake")
-	'''
+        return os.path.join(self.opencvdir, "platforms", "android", "android.toolchain.cmake")
 
     def get_engine_apk_dest(self, engdest):
         return os.path.join(engdest, "platforms", "android", "service", "engine", ".build")

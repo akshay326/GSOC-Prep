@@ -28,6 +28,7 @@ Your directory structure should be like:
    ..
 ```
 ### A few lessons
++ Have the latest cmake. In my case the ubuntu repositories weren't enough.
 + On the [official developer pagge](https://developer.android.com/ndk/guides/cpp-support.html), it clearly mentioned that LLVM's libc++ or c++_static/shared should be prefered as a runtime. This will be the only STL supported in future for NDK.
 + Whats **#include_next** directive? Refer [this GNU doc](https://gcc.gnu.org/onlinedocs/cpp/Wrapper-Headers.html)
 + Dont include ```/usr/include``` or any other system header anywhere. This'll lead to an array of missing headers.  

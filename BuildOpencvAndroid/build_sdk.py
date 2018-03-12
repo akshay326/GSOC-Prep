@@ -75,15 +75,20 @@ class ABI:
     def haveIPP(self):
         return self.name == "x86" or self.name == "x86_64"
 
+# TODO akshay made some edits
 ABIs = [
-    ABI("2", "armeabi-v7a", "arm-linux-androideabi-4.8", cmake_name="armeabi-v7a with NEON"),
-    ABI("1", "armeabi",     "arm-linux-androideabi-4.8"),
-    ABI("3", "arm64-v8a",   "aarch64-linux-android-4.9"),
     ABI("5", "x86_64",      "x86_64-4.9"),
-    ABI("4", "x86",         "x86-4.8"),
-    ABI("7", "mips64",      "mips64el-linux-android-4.9"),
-    ABI("6", "mips",        "mipsel-linux-android-4.8")
 ]
+
+# ABIs = [
+#     ABI("2", "armeabi-v7a", "arm-linux-androideabi-4.8", cmake_name="armeabi-v7a with NEON"),
+#     ABI("1", "armeabi",     "arm-linux-androideabi-4.8"),
+#     ABI("3", "arm64-v8a",   "aarch64-linux-android-4.9"),
+#     ABI("5", "x86_64",      "x86_64-4.9"),
+#     ABI("4", "x86",         "x86-4.8"),
+#     ABI("7", "mips64",      "mips64el-linux-android-4.9"),
+#     ABI("6", "mips",        "mipsel-linux-android-4.8")
+# ]
 
 #===================================================================================================
 
@@ -101,7 +106,9 @@ class Builder:
         self.use_ccache = True
 
     def get_toolchain_file(self):
-        return os.path.join(self.opencvdir, "platforms", "android", "android.toolchain.cmake")
+        # TODO akshay made some edits
+        return os.path.join(self.workdir, "android.toolchain.cmake")
+        # return os.path.join(self.opencvdir, "platforms", "android", "android.toolchain.cmake")
 
     def get_engine_apk_dest(self, engdest):
         return os.path.join(engdest, "platforms", "android", "service", "engine", ".build")
@@ -130,7 +137,8 @@ class Builder:
             "-DBUILD_ANDROID_EXAMPLES=ON",
             "-DINSTALL_ANDROID_EXAMPLES=ON",
             "-DANDROID_STL=gnustl_static",
-            "-DANDROID_NATIVE_API_LEVEL=9",
+            # "-DANDROID_NATIVE_API_LEVEL=9",
+            "-DANDROID_NATIVE_API_LEVEL=21",
             "-DANDROID_ABI='%s'" % abi.cmake_name,
             "-DWITH_TBB=ON",
             "-DANDROID_TOOLCHAIN_NAME=%s" % abi.toolchain
@@ -141,10 +149,12 @@ class Builder:
 
         cmd.append(self.opencvdir)
 
-        if self.use_ccache == True:
-            cmd.append("-DNDK_CCACHE=ccache")
+        # TODO akshay made some edits
+        # if self.use_ccache == True:
+        #     cmd.append("-DNDK_CCACHE=ccache")
         if do_install:
-            cmd.extend(["-DBUILD_TESTS=ON", "-DINSTALL_TESTS=ON"])
+            cmd.extend(["-DINSTALL_TESTS=ON"])
+            # cmd.extend(["-DBUILD_TESTS=ON", "-DINSTALL_TESTS=ON"])
         execute(cmd)
         if do_install:
             execute(["ninja"])

@@ -9,7 +9,7 @@ Equivalent of these files (if exists) have to be edited for ViSP too
 
 | Cmake File | Status        | Note |
 | ---------- | ------------- | ---- |
-| CMakeLists.txt | to be edited | 
+| CMakeLists.txt | **I guess done** | I can't see any need of editing its content. May've to add few lines later
 | cmake/OpenCVModule.cmake | **Edited**  | Added a few lines in cmake/GenAndroidMK.cmake 
 | cmake/OpenCVGenConfig.cmake | **Created** | Simply replaced many OPENCV occurrences as VISP, check it once  
 | cmake/OpenCVGenPkgConfig.cmake | **Edited** | Assuming this is visp/VISPGenerateConfigScript.cmake 
@@ -55,3 +55,4 @@ But since ViSP has additional third party libraries, we may have to edit(or ofte
 | OPENCV_THIS_DIR | VISP_THIS_DIR | added in VISP.mk.in
 | OPENCV_TARGET_ARCH_ABI | VISP_TARGET_ARCH_ABI | added in VISP.mk.in  
 | ocv_cmake_configure | vp_cmake_configure | this little bug was to find 
+| ocv_update | vp_update | created in VISPUtils.cmake 

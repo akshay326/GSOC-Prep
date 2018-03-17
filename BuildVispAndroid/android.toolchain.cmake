@@ -46,7 +46,7 @@ set(ANDROID_NDK_REVISION 16)
 
 # TODO this is needed for lapack - visp module
 # Refer https://stackoverflow.com/questions/22663897/unknown-type-name-off64-t/34853360#34853360
-SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Doff64_t=__off64_t -D__ANDROID_API__=21")
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Doff64_t=__off64_t -D__ANDROID_API__=24")
 
 # Touch toolchain variable to suppress "unused variable" warning.
 # This happens if CMake is invoked with the same command line the second time.

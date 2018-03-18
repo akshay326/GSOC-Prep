@@ -114,5 +114,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public native void processImage(Bitmap bitmap);
+    public static native void processImage(Bitmap bitmap);
 }

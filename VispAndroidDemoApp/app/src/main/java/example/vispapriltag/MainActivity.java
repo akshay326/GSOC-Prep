@@ -3,16 +3,11 @@ package example.vispapriltag;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.ColorMatrix;
-import android.graphics.ColorMatrixColorFilter;
-import android.graphics.Paint;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -23,7 +18,6 @@ import static example.vispapriltag.Constants.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String TAG = "VISP";
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -38,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView imageView;
 
-    public static native void processImage(Bitmap bitmap);
+    public static native void processArray(byte array[], int width, int height);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,28 +100,23 @@ public class MainActivity extends AppCompatActivity {
             int h1 = bitmap.getHeight();
             int w1 = bitmap.getWidth();
 
-            // Shrink by 25% recursively
+            // Shrink by 25% recursively if size > MAX_DIMEN
             while (h1 > MAX_IMG_DIMEN || w1 > MAX_IMG_DIMEN) {
                 bitmap = Bitmap.createScaledBitmap(bitmap, w1 * 3 / 4, h1 * 3 / 4, false);
                 h1 = bitmap.getHeight();
                 w1 = bitmap.getWidth();
             }
 
-            // turn it to grayscale here only
-            // don't know why but there's some issue with locking of pixels
-            bitmap = toGrayscale(bitmap);
+            byte array[] = new byte[bitmap.getHeight()*bitmap.getWidth()];
 
-            Log.d(TAG, bitmap.getConfig().toString());
-
-            for(int i=0;i<bitmap.getHeight();++i)
-                for(int j=0;j<bitmap.getWidth();++j) {
+            for(int i=0;i<bitmap.getWidth();++i)
+                for(int j=0;j<bitmap.getHeight();++j) {
                     int color = bitmap.getPixel(i, j);
-                    Log.d(TAG, color + "," + Color.alpha(color) + "," + Color.red(color)
-                            + "," + Color.green(color) + "," + Color.blue(color));
+                    array[i*bitmap.getWidth() + j] = (byte) ((Color.red(color) + Color.green(color) + Color.blue(color))/3);
                 }
 
             // do the image processing
-            processImage(bitmap);
+            processArray(array,bitmap.getWidth(),bitmap.getHeight());
 
             // rescale it. Only for 16x16 or smaller debug images
             if (bitmap.getWidth() < 30 || bitmap.getHeight() < 30)
@@ -137,30 +126,5 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public Bitmap toGrayscale(Bitmap bmpOriginal){
-        int width, height;
-        height = bmpOriginal.getHeight();
-        width = bmpOriginal.getWidth();
-
-//        Bitmap bmpGrayscale = Bitmap.createBitmap(width, height, Bitmap.Config.ALPHA_8);
-//        for(int i=0;i<bmpOriginal.getWidth();++i)
-//            for(int j=0;j<bmpOriginal.getHeight();++j) {
-//                int color = bmpOriginal.getPixel(i, j);
-//                // TODO optimize this
-//                bmpGrayscale.setPixel(i,j,(Color.red(color) + Color.green(color) + Color.blue(color))/3);
-//            }
-
-        Bitmap bmpGrayscale = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        Canvas c = new Canvas(bmpGrayscale);
-        Paint paint = new Paint();
-        ColorMatrix cm = new ColorMatrix();
-        cm.setSaturation(0);
-        ColorMatrixColorFilter f = new ColorMatrixColorFilter(cm);
-        paint.setColorFilter(f);
-        c.drawBitmap(bmpOriginal, 0, 0, paint);
-
-        return bmpGrayscale;
     }
 }

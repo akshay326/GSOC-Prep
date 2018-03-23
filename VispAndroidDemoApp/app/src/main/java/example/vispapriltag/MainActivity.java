@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.IOException;
 
@@ -31,16 +32,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     ImageView imageView;
+    Button button;
+    TextView resultText;
 
-    public static native void processArray(byte array[], int width, int height);
+    public static native String processArray(byte array[], int width, int height);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = findViewById(R.id.ButtonSelectImage);
+        button = findViewById(R.id.ButtonSelectImage);
         imageView = findViewById(R.id.ImageProcessed);
+        resultText = findViewById(R.id.resultTextView);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,14 +113,17 @@ public class MainActivity extends AppCompatActivity {
 
             byte array[] = new byte[bitmap.getHeight()*bitmap.getWidth()];
 
+            // create a greyscale image from colored one
             for(int i=0;i<bitmap.getWidth();++i)
                 for(int j=0;j<bitmap.getHeight();++j) {
                     int color = bitmap.getPixel(i, j);
-                    array[i*bitmap.getWidth() + j] = (byte) ((Color.red(color) + Color.green(color) + Color.blue(color))/3);
+
+                    // formula for luminosity is 0.21 R + 0.72 G + 0.07 B.
+                    array[i + j*bitmap.getHeight()] = (byte) (0.21*Color.red(color) + 0.72*Color.green(color) + 0.07*Color.blue(color));
                 }
 
             // do the image processing
-            processArray(array,bitmap.getWidth(),bitmap.getHeight());
+            resultText.setText(processArray(array,bitmap.getWidth(),bitmap.getHeight()));
 
             // rescale it. Only for 16x16 or smaller debug images
             if (bitmap.getWidth() < 30 || bitmap.getHeight() < 30)

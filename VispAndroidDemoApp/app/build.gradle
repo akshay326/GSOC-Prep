@@ -4,14 +4,14 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "example.vispapriltag"
-        minSdkVersion 14
+        minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++14 -frtti -fexceptions -ljnigraphics"
+                cppFlags "-std=c++14 -frtti -fexceptions"
                 abiFilters 'x86' // if i add other filters, it'll stick to the last of them since there's no MK file specifying it
             }
         }

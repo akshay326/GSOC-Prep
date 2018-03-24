@@ -1,23 +1,20 @@
 package example.vispapriltag;
 
-import android.content.DialogInterface;
+import android.Manifest;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.net.Uri;
-import android.provider.MediaStore;
+import android.content.pm.PackageManager;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import java.io.IOException;
+public class MainActivity extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
 
-import static example.vispapriltag.Constants.*;
-
-public class MainActivity extends AppCompatActivity {
+    private static final int PERMISSION_REQUEST_CAMERA = 0;
+    private View mLayout;
 
 
     // Used to load the 'native-lib' library on application startup.
@@ -31,107 +28,94 @@ public class MainActivity extends AppCompatActivity {
         System.loadLibrary("native-lib");
     }
 
-    ImageView imageView;
-    Button button;
-    TextView resultText;
 
-    public static native String processArray(byte array[], int width, int height);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = findViewById(R.id.ButtonSelectImage);
-        imageView = findViewById(R.id.ImageProcessed);
-        resultText = findViewById(R.id.resultTextView);
+        mLayout = findViewById(R.id.main_layout);
 
+        Button button = findViewById(R.id.ButtonSelectImage);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                takeImage();
+                showCameraPreview();
             }
         });
-    }
-
-    public void takeImage() {
-        final CharSequence[] items = {"Choose from Gallery", "Cancel"};
-        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
-        builder.setTitle("Add Photo!");
-        builder.setCancelable(false);
-        builder.setItems(items, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-
-                if (items[item].equals(items[0])) {
-                    Intent intent = new Intent(
-                            Intent.ACTION_PICK,
-                            MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    startActivityForResult(intent, PICK_IMAGE_GALLERY);
-                } else if (items[item].equals("Cancel")) {
-                    dialog.dismiss();
-                }
-            }
-        });
-        builder.show();
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        if (requestCode == PERMISSION_REQUEST_CAMERA) {
+            // Request for camera permission.
+            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission has been granted. Start camera preview Activity.
+                Snackbar.make(mLayout, "Camera permission was granted. Starting preview.",
+                        Snackbar.LENGTH_SHORT)
+                        .show();
+                startCamera();
+            } else {
+                // Permission request was denied.
+                Snackbar.make(mLayout, "Camera permission request was denied.",
+                        Snackbar.LENGTH_SHORT)
+                        .show();
+            }
+        }
+    }
 
-        switch (requestCode) {
-            case PICK_IMAGE_GALLERY:
-                if (resultCode == RESULT_OK && data != null && data.getData() != null)
-                    saveImageCopy(data.getData());
-                break;
-
+    private void showCameraPreview() {
+        // Check if the Camera permission has been granted
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                == PackageManager.PERMISSION_GRANTED) {
+            // Permission is already available, start camera preview
+            Snackbar.make(mLayout,
+                    "Camera permission is available. Starting preview.",
+                    Snackbar.LENGTH_SHORT).show();
+            startCamera();
+        } else {
+            // Permission is missing and must be requested.
+            requestCameraPermission();
         }
     }
 
     /**
-     * Make copy of the image
-     * Resize it so that h,w < 1400
-     * Set the uri for future use
-     *
-     * @param uri URI of the selected image
+     * Requests the {@link android.Manifest.permission#CAMERA} permission.
+     * If an additional rationale should be displayed, the user has to launch the request from
+     * a SnackBar that includes additional information.
      */
-    private void saveImageCopy(Uri uri) {
-
-        try {
-            Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-
-            int h1 = bitmap.getHeight();
-            int w1 = bitmap.getWidth();
-
-            // Shrink by 25% recursively if size > MAX_DIMEN
-            while (h1 > MAX_IMG_DIMEN || w1 > MAX_IMG_DIMEN) {
-                bitmap = Bitmap.createScaledBitmap(bitmap, w1 * 3 / 4, h1 * 3 / 4, false);
-                h1 = bitmap.getHeight();
-                w1 = bitmap.getWidth();
-            }
-
-            byte array[] = new byte[bitmap.getHeight()*bitmap.getWidth()];
-
-            // create a greyscale image from colored one
-            for(int i=0;i<bitmap.getWidth();++i)
-                for(int j=0;j<bitmap.getHeight();++j) {
-                    int color = bitmap.getPixel(i, j);
-
-                    // formula for luminosity is 0.21 R + 0.72 G + 0.07 B.
-                    array[i + j*bitmap.getHeight()] = (byte) (0.21*Color.red(color) + 0.72*Color.green(color) + 0.07*Color.blue(color));
+    private void requestCameraPermission() {
+        // Permission has not been granted and must be requested.
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                Manifest.permission.CAMERA)) {
+            // Provide an additional rationale to the user if the permission was not granted
+            // and the user would benefit from additional context for the use of the permission.
+            // Display a SnackBar with a button to request the missing permission.
+            Snackbar.make(mLayout, "Camera access is required to display the camera preview.",
+                    Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Request the permission
+                    ActivityCompat.requestPermissions(MainActivity.this,
+                            new String[]{Manifest.permission.CAMERA},
+                            PERMISSION_REQUEST_CAMERA);
                 }
+            }).show();
 
-            // do the image processing
-            resultText.setText(processArray(array,bitmap.getWidth(),bitmap.getHeight()));
-
-            // rescale it. Only for 16x16 or smaller debug images
-            if (bitmap.getWidth() < 30 || bitmap.getHeight() < 30)
-                bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.getWidth() * 10, bitmap.getHeight() * 10, false);
-
-            imageView.setImageBitmap(bitmap);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            Snackbar.make(mLayout,
+                    "Permission is not available. Requesting camera permission.",
+                    Snackbar.LENGTH_SHORT).show();
+            // Request the permission. The result will be received in onRequestPermissionResult().
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},
+                    PERMISSION_REQUEST_CAMERA);
         }
+    }
+
+    private void startCamera() {
+        Intent intent = new Intent(this, CameraPreviewActivity.class);
+        startActivity(intent);
     }
 }

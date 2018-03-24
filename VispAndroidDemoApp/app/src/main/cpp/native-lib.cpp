@@ -16,17 +16,12 @@ std::string detectTag(vpImage<u_char> &I) {
 #ifdef VISP_HAVE_APRILTAG
     vpDetectorAprilTag::vpAprilTagFamily tagFamily = vpDetectorAprilTag::TAG_36h11;
     vpDetectorAprilTag::vpPoseEstimationMethod poseEstimationMethod = vpDetectorAprilTag::HOMOGRAPHY_VIRTUAL_VS;
-    double tagSize = 0.023;
-    float quad_decimate = 1.0;
-    int nbThreads = 2;
+    double tagSize = 0.053;
+    float quad_decimate = 4.0;
+    int nbThreads = 4;
 
     vpCameraParameters cam;
     cam.initPersProjWithoutDistortion(615.1674805, 615.1675415, 312.1889954, 243.4373779);
-
-    std::stringstream ss;
-    ss << "cam:\n" << cam << std::endl;
-    ss << "poseEstimationMethod: " << poseEstimationMethod << std::endl;
-    ss << "tagFamily: " << tagFamily << std::endl;
 
     try {
         //! [Create AprilTag detector]
@@ -44,26 +39,26 @@ std::string detectTag(vpImage<u_char> &I) {
         bool status = detector.detect(I, tagSize, cam, cMo_vec);
         t = vpTime::measureTimeMs() - t;
 
+        std::stringstream ss;
         ss << "\nDetection time: " << t << " ms for " << detector.getNbObjects() << " tags";
 
         if (status){
             const std::string tmp = ss.str();
             LOG("%s", tmp.c_str());
 
-            //! [Parse detected codes]
-            for (size_t i = 0; i < detector.getNbObjects(); i++) {
-                //! [Get location]
-                vpRect bbox = detector.getBBox(i);
-                //! [Get location]
-                vpDisplay::displayRectangle(I, bbox, vpColor::green);
-                //! [Get message]
-                vpDisplay::displayText(I, (int) (bbox.getTop() - 10), (int) bbox.getLeft(),
-                                       "Message: \"" + detector.getMessage(i) + "\"", vpColor::red);
-                // ss << "  Pose: " << vpPoseVector(cMo_vec[i]).t() << std::endl;
-            }
+//            //! [Parse detected codes]
+//            for (size_t i = 0; i < detector.getNbObjects(); i++) {
+//                //! [Get location]
+//                vpRect bbox = detector.getBBox(i);
+//                //! [Get location]
+//                vpDisplay::displayRectangle(I, bbox, vpColor::green);
+//                //! [Get message]
+//                vpDisplay::displayText(I, (int) (bbox.getTop() - 10), (int) bbox.getLeft(),
+//                                       "Message: \"" + detector.getMessage(i) + "\"", vpColor::red);
+//                // ss << "  Pose: " << vpPoseVector(cMo_vec[i]).t() << std::endl;
+//            }
 
-        } else
-            ss << "\nNothing detected";
+        }
 
         const std::string tmp = ss.str();
         LOG("%s", tmp.c_str());
@@ -94,7 +89,7 @@ void printGreyscale(const vpImage<u_char> &I){
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_example_vispapriltag_MainActivity_processArray(JNIEnv *env, jclass type, jbyteArray array_,
+Java_example_vispapriltag_CameraPreview_processArray(JNIEnv *env, jclass type, jbyteArray array_,
                                                     jint width, jint height) {
     jbyte *array = env->GetByteArrayElements(array_, NULL);
 

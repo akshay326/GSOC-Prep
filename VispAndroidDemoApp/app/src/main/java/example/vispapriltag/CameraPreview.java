@@ -47,6 +47,9 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         // underlying surface is created and destroyed.
         mHolder = getHolder();
         mHolder.addCallback(this);
+
+        // init the ViSP tag detection system
+        initTagDetection();
     }
 
     public void surfaceCreated(SurfaceHolder holder) {
@@ -142,7 +145,9 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     // Getting 24 FPS, 640x480 size images
     public void onPreviewFrame(byte[] data, Camera camera) {
 
-        if (System.currentTimeMillis() > 500 + lastTime) {
+        Log.d("###",camera.getParameters().getPreviewFormat()+"");
+
+        if (System.currentTimeMillis() > 200 + lastTime) {
             for (int i = 0; i < width * height; ++i)
                 greyscale[i] = (byte) (data[i] & 0xff);
 
@@ -154,4 +159,5 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     }
 
     public static native String processArray(byte array[], int width, int height);
+    public static native void initTagDetection();
 }

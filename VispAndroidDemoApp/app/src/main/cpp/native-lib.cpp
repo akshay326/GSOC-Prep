@@ -12,34 +12,42 @@
 void printGreyscale(const vpImage<u_char> &I);
 std::string detectTag(vpImage<u_char> &I);
 
-std::string detectTag(vpImage<u_char> &I) {
 #ifdef VISP_HAVE_APRILTAG
+    // Init detection parameters only once, for faster conversion
     vpDetectorAprilTag::vpAprilTagFamily tagFamily = vpDetectorAprilTag::TAG_36h11;
-    vpDetectorAprilTag::vpPoseEstimationMethod poseEstimationMethod = vpDetectorAprilTag::HOMOGRAPHY_VIRTUAL_VS;
-    double tagSize = 0.053;
-    float quad_decimate = 4.0;
-    int nbThreads = 4;
-
+    vpDetectorAprilTag::vpPoseEstimationMethod poseEstimationMethod;
     vpCameraParameters cam;
+    double tagSize, t;
+    float quad_decimate;
+    int nbThreads;
+    vpDetectorAprilTag detector(tagFamily);  // Create AprilTag detector
+    std::vector<vpHomogeneousMatrix> cMo_vec;
+    std::stringstream ss;
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_example_vispapriltag_CameraPreview_initTagDetection(JNIEnv *env, jclass type) {
+    poseEstimationMethod = vpDetectorAprilTag::HOMOGRAPHY_VIRTUAL_VS;
+    tagSize = 0.053;
+    quad_decimate = 4.0;
+    nbThreads = 4;
     cam.initPersProjWithoutDistortion(615.1674805, 615.1675415, 312.1889954, 243.4373779);
 
+    //! [AprilTag detector settings]
+    detector.setAprilTagPoseEstimationMethod(poseEstimationMethod);
+    detector.setAprilTagNbThreads(nbThreads);
+    detector.setAprilTagQuadDecimate(quad_decimate);
+    detector.setDisplayTag(false);
+
+}
+
+std::string detectTag(vpImage<u_char> &I) {
     try {
-        //! [Create AprilTag detector]
-        vpDetectorAprilTag detector(tagFamily);
-
-        //! [AprilTag detector settings]
-        detector.setAprilTagPoseEstimationMethod(poseEstimationMethod);
-        detector.setAprilTagNbThreads(nbThreads);
-        detector.setAprilTagQuadDecimate(quad_decimate);
-        detector.setDisplayTag(true);
-
-        std::vector<vpHomogeneousMatrix> cMo_vec;
-
-        double t = vpTime::measureTimeMs();
+        ss.str(""); // emptying or flushing the stream
+        t = vpTime::measureTimeMs();
         bool status = detector.detect(I, tagSize, cam, cMo_vec);
         t = vpTime::measureTimeMs() - t;
 
-        std::stringstream ss;
         ss << "\nDetection time: " << t << " ms for " << detector.getNbObjects() << " tags";
 
         if (status){
@@ -66,9 +74,10 @@ std::string detectTag(vpImage<u_char> &I) {
 
     } catch (const vpException &e) {
         LOG("Catch an exception: %s", e.getMessage());
+        return e.getMessage();
     }
-#endif
 }
+#endif
 
 //
 // Will print at max a 15x15 matrix

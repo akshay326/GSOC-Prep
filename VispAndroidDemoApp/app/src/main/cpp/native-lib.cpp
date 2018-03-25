@@ -23,10 +23,12 @@ std::string detectTag(vpImage<u_char> &I);
     vpDetectorAprilTag detector(tagFamily);  // Create AprilTag detector
     std::vector<vpHomogeneousMatrix> cMo_vec;
     std::stringstream ss;
+    u_char *grey;
+    uint w, h;
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_example_vispapriltag_CameraPreview_initTagDetection(JNIEnv *env, jclass type) {
+Java_example_vispapriltag_CameraPreview_initTagDetection(JNIEnv *env, jclass type, jint width, jint height) {
     poseEstimationMethod = vpDetectorAprilTag::HOMOGRAPHY_VIRTUAL_VS;
     tagSize = 0.053;
     quad_decimate = 4.0;
@@ -39,6 +41,11 @@ Java_example_vispapriltag_CameraPreview_initTagDetection(JNIEnv *env, jclass typ
     detector.setAprilTagQuadDecimate(quad_decimate);
     detector.setDisplayTag(false);
 
+    w = (uint) width;
+    h = (uint) height;
+
+    // initialize the greyscale pointer
+    grey = new u_char[w*h];
 }
 
 std::string detectTag(vpImage<u_char> &I) {
@@ -98,12 +105,11 @@ void printGreyscale(const vpImage<u_char> &I){
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_example_vispapriltag_CameraPreview_processArray(JNIEnv *env, jclass type, jbyteArray array_,
-                                                    jint width, jint height) {
+Java_example_vispapriltag_CameraPreview_processArray(JNIEnv *env, jclass type, jbyteArray array_) {
     jbyte *array = env->GetByteArrayElements(array_, NULL);
 
     // If i don't copy, it's producing SIGSEV fault
-    vpImage<u_char> I((u_char *const) array, (const unsigned int) height, (const unsigned int) width,
+    vpImage<u_char> I((u_char *const) array, (const unsigned int) h, (const unsigned int) w,
                       true);
 
 //    printGreyscale(I);

@@ -26,8 +26,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     private Camera mCamera;
     private Camera.CameraInfo mCameraInfo;
     private int mDisplayOrientation;
-    private int width, height;
-    private byte[] greyscale;
     private long lastTime;
 
     public CameraPreview(Context context, Camera camera, Camera.CameraInfo cameraInfo,
@@ -49,7 +47,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         mHolder.addCallback(this);
 
         // init the ViSP tag detection system
-        initTagDetection();
+        initTagDetection(mCamera.getParameters().getPreviewSize().width, mCamera.getParameters().getPreviewSize().height);
     }
 
     public void surfaceCreated(SurfaceHolder holder) {
@@ -91,9 +89,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         int orientation = calculatePreviewOrientation(mCameraInfo, mDisplayOrientation);
         mCamera.setDisplayOrientation(orientation);
 
-        width = mCamera.getParameters().getPreviewSize().width;
-        height = mCamera.getParameters().getPreviewSize().height;
-        greyscale = new byte[width*height];
         lastTime = System.currentTimeMillis();
 
         try {
@@ -145,19 +140,16 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     // Getting 24 FPS, 640x480 size images
     public void onPreviewFrame(byte[] data, Camera camera) {
 
-        Log.d("###",camera.getParameters().getPreviewFormat()+"");
-
         if (System.currentTimeMillis() > 200 + lastTime) {
-            for (int i = 0; i < width * height; ++i)
-                greyscale[i] = (byte) (data[i] & 0xff);
 
-//          do the image processing
-            updateResult(processArray(greyscale, width, height));
+            // do the image processing
+            // Its working even without grey scale conversion
+            updateResult(processArray(data));
 
             lastTime = System.currentTimeMillis();
         }
     }
 
-    public static native String processArray(byte array[], int width, int height);
-    public static native void initTagDetection();
+    public static native String processArray(byte array[]);
+    public static native void initTagDetection(int w, int h);
 }

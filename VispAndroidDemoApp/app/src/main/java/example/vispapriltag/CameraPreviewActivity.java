@@ -1,12 +1,17 @@
 package example.vispapriltag;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.hardware.Camera;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.nio.ByteBuffer;
 
 /**
  * Displays a {@link CameraPreview} of the first {@link Camera}.
@@ -27,7 +32,8 @@ public class CameraPreviewActivity extends AppCompatActivity {
     private static final int CAMERA_ID = 0;
 
     private Camera mCamera;
-    public static TextView resultTextView;
+    public static TextView result;
+    static int w,h;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +52,11 @@ public class CameraPreviewActivity extends AppCompatActivity {
 
             setContentView(R.layout.activity_camera_preview);
 
-            resultTextView = findViewById(R.id.resultTextView);
+            result = findViewById(R.id.resultTextView);
+
+            // init the byte array
+            w = mCamera.getParameters().getPreviewSize().width;
+            h = mCamera.getParameters().getPreviewSize().height;
 
             // Get the rotation of the screen to adjust the preview image accordingly.
             final int displayRotation = getWindowManager().getDefaultDisplay()
@@ -59,8 +69,8 @@ public class CameraPreviewActivity extends AppCompatActivity {
         }
     }
 
-    public static void updateResult(String text){
-        resultTextView.setText(text);
+    public static void updateResult(String resultText){
+        result.setText(resultText);
     }
 
     @Override

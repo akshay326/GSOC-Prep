@@ -9,6 +9,8 @@ import android.view.SurfaceView;
 
 import java.io.IOException;
 
+import javax.microedition.khronos.opengles.GL10;
+
 import static example.vispapriltag.CameraPreviewActivity.updateResult;
 
 /**
@@ -126,6 +128,8 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
                 break;
         }
 
+        degrees = (degrees + 90)%360;
+
         int result;
         if (info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
             result = (info.orientation + degrees) % 360;
@@ -140,10 +144,11 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     // Getting 24 FPS, 640x480 size images
     public void onPreviewFrame(byte[] data, Camera camera) {
 
-        if (System.currentTimeMillis() > 200 + lastTime) {
+        if (System.currentTimeMillis() > 50 + lastTime) {
 
             // do the image processing
             // Its working even without grey scale conversion
+            // Since jni has array pass by reference, it can edit `data` too
             updateResult(processArray(data));
 
             lastTime = System.currentTimeMillis();

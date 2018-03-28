@@ -32,7 +32,7 @@ public class CameraPreviewActivity extends AppCompatActivity {
     private static final int CAMERA_ID = 0;
 
     private Camera mCamera;
-    public static TextView result;
+    public static ImageView resultImageView;
     static int w,h;
 
     @Override
@@ -52,7 +52,7 @@ public class CameraPreviewActivity extends AppCompatActivity {
 
             setContentView(R.layout.activity_camera_preview);
 
-            result = findViewById(R.id.resultTextView);
+            resultImageView = findViewById(R.id.resultImage);
 
             // init the byte array
             w = mCamera.getParameters().getPreviewSize().width;
@@ -69,8 +69,19 @@ public class CameraPreviewActivity extends AppCompatActivity {
         }
     }
 
-    public static void updateResult(String resultText){
-        result.setText(resultText);
+    public static void updateResult(byte[] Src){
+        byte [] Bits = new byte[Src.length*4]; //That's where the RGBA array goes.
+        int i;
+        for(i=0;i<Src.length;i++){
+            Bits[i*4] = Bits[i*4+1] = Bits[i*4+2] = Src[i]; //Invert the source bits
+            Bits[i*4+3] = -1;//0xff, that's the alpha.
+        }
+
+        //Now put these nice RGBA pixels into a Bitmap object
+        Bitmap bm = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        bm.copyPixelsFromBuffer(ByteBuffer.wrap(Bits));
+
+        resultImageView.setImageBitmap(bm);
     }
 
     @Override

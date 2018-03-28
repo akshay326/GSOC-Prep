@@ -149,12 +149,15 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
             // do the image processing
             // Its working even without grey scale conversion
             // Since jni has array pass by reference, it can edit `data` too
-            updateResult(processArray(data));
+            processArray(data);
+
+            // Turn `data` to bitmap and display
+            updateResult(data);
 
             lastTime = System.currentTimeMillis();
         }
     }
 
-    public static native String processArray(byte array[]);
+    public static native void processArray(byte array[]);
     public static native void initTagDetection(int w, int h);
 }

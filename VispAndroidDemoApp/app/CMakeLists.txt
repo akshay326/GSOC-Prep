@@ -29,7 +29,7 @@ set_target_properties(visp_me PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvi
 # VISP
 # ------------------------------
 
-add_library(native-lib  SHARED  src/main/cpp/native-lib.cpp )
+add_library(native-lib  SHARED  src/main/cpp/native-lib.cpp)
 
 find_library(log-lib log)
 target_link_libraries(native-lib ${log-lib} visp_detection visp_core visp_io visp_vision visp_me visp_imgproc)

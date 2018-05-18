@@ -45,7 +45,7 @@ But since ViSP has additional third party libraries, we may have to edit(or ofte
 
 ### Quick lookup table for equivalent variables  
 
-| OpenCV variable | ViSP variable |Note | 
+| OpenCV variable | ViSP variable | Note | 
 | --------------- | ------------- | ---- |
 | OpenCV_SOURCE_DIR | VISP_SOURCE_DIR |
 | OPENCV_INCLUDE_DIRS_CONFIGCMAKE | VISP_INCLUDE_DIRS_CONFIGCMAKE
@@ -56,3 +56,16 @@ But since ViSP has additional third party libraries, we may have to edit(or ofte
 | OPENCV_TARGET_ARCH_ABI | VISP_TARGET_ARCH_ABI | added in VISP.mk.in  
 | ocv_cmake_configure | vp_cmake_configure | this little bug was to find 
 | ocv_update | vp_update | created in VISPUtils.cmake 
+| OPENCV_VCS_VERSION | VISP_VCS_VERSION | in CMakeLists.txt
+| OPENCV_VERSION_PLAIN | VISP_VERSION
+| ocv_module_disable | __vp_module_turn_off | I guess they are the same
+| ocv_add_module | vp_add_module
+| ocv_assert | vp_assert | Added in ViSPUtils.cmake
+| ocv_list_add_prefix | vp_list_add_prefix | Added in ViSPUtils.cmake
+| ocv_list_add_suffix | vp_list_add_suffix | Added in ViSPUtils.cmake
+| OPENCV_*_INSTALL_PATHS | VISP_*_INSTALL_PATHS | Added all of them in CMakeLists.txt
+
+### Quick lookup table for equivalent files
+| OpenCV File | ViSP File | Note | 
+| --------------- | ------------- | ---- |
+| OpenCVVersion.cmake | CMakeLists.txt |  

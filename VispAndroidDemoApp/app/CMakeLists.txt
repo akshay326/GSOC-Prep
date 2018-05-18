@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.4.1)
 # i've created a link to the .so files folder
 set(VISP_LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI})
 
-include_directories(/home/akshay/Projects/GSOC/BuildVispAndroid/build/include)
+include_directories(/home/akshay/Projects/GSOC/for-android-demo/include)
 
 # VISP
 # -----------------------------

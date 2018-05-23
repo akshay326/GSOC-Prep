@@ -1,12 +1,22 @@
 # Remove some files if they exist
-declare -a arr=("MyClass.class" "MyClass.h" "native.h")
+declare -a arr=("MyClass.class" "native.h")
 for i in "${arr[@]}"
 do
    [ -e "$i" ] && rm "$i"
 done
 
+# Generating native header files
 javac MyClass.java
 javah -jni MyClass
 mv MyClass.h native.h   # rename the Native header file. Just for readability
-g++ -fPIC -I/usr/java/jdk1.8.0_111/include -I/usr/java/jdk1.8.0_111/include/linux -shared -o libMyLib.so native.c
-java -Djava.library.path=. MyClass
+
+# Generating .so file. NOTE that original C++ code and native JNI code will hv their separate .so files
+rm -r build
+mkdir build
+cd build
+cmake ..
+make -j4
+
+# Execute
+cd ..
+java -Djava.library.path=./build:/home/akshay/Projects/GSOC/SampleCPackage/build/Foo MyClass

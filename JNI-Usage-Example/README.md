@@ -1,5 +1,12 @@
 ## ViSP Java Development
 
+To compile the given scripts, make a few changes in `CMakeLists.txt` :
+1. Change below line to ViSP's built libraries folder  
+```set(VISP_LIB_DIR /home/akshay/Projects/Visp-WS/visp_build/lib)```
+2. Change below line to include ViSP's header files  
+```include_directories(/home/akshay/Projects/GSOC/for-android-demo/include)```
+
+### Info
 + I'm using CMake for compiling and generating the shared libraries(`.so` files)
 + Make sure you have the required C++ code in `native.cpp` for corresponding functions in `MyClass.java`
 + Just hit `./run.sh` to run the script. It'll compile the Java code, generate required header files, and integrate the native source code.

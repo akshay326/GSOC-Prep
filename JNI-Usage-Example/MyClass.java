@@ -2,16 +2,15 @@ public class MyClass {
 
     static {
         System.loadLibrary("MyLib"); // => libMyLib.so
-///home/akshay/Projects/GSOC/SampleCPackage/build/Foo
-        System.loadLibrary("Foo");   // => original library
     }
 
     public static void main(String[] args) {
 
-        sayHello();
-        sayHello();
+		int row = 3,col =5;
+		double val=1.3; 
+        printVpMatrix(row,col,val);
 
     }
 
-    public static native void sayHello();
+    public static native void printVpMatrix(int r,int c,double val);
 }

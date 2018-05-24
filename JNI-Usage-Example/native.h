@@ -9,11 +9,11 @@ extern "C" {
 #endif
 /*
  * Class:     MyClass
- * Method:    sayHello
- * Signature: ()V
+ * Method:    printVpMatrix
+ * Signature: (IID)V
  */
-JNIEXPORT void JNICALL Java_MyClass_sayHello
-  (JNIEnv *, jclass);
+JNIEXPORT void JNICALL Java_MyClass_printVpMatrix
+  (JNIEnv *, jclass, jint, jint, jdouble);
 
 #ifdef __cplusplus
 }

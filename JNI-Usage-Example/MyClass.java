@@ -1,16 +1,16 @@
+import org.visp.core.VpMatrix;
+
 public class MyClass {
 
     static {
-        System.loadLibrary("MyLib"); // => libMyLib.so
+        System.loadLibrary("MyLib");
     }
 
     public static void main(String[] args) {
 
-		int row = 3,col =5;
-		double val=1.3; 
-        printVpMatrix(row,col,val);
+	VpMatrix vp = new VpMatrix(2,3);
+	System.out.println(vp.cols());
+	System.out.println(vp.rows());
 
     }
-
-    public static native void printVpMatrix(int r,int c,double val);
 }

@@ -4,10 +4,36 @@
 #include "native.h"
 #include <visp3/core/vpMatrix.h>
 
-// If u're function becomes static in java, this signature changes
-JNIEXPORT void JNICALL Java_MyClass_printVpMatrix(JNIEnv *, jclass, jint rows, jint cols, jdouble value)
-{
-	vpMatrix M(rows, cols, value);
-	M.print(std::cout,rows*cols);
-    return;
+JNIEXPORT jlong JNICALL Java_org_visp_core_VpMatrix_n_1vpMatrix__
+  (JNIEnv *, jclass){
+	return (jlong) new vpMatrix();  
 }
+
+
+JNIEXPORT jlong JNICALL Java_org_visp_core_VpMatrix_n_1vpMatrix__II
+  (JNIEnv *, jclass, jint rows, jint cols){
+	return (jlong) new vpMatrix(rows, cols);
+}
+
+
+JNIEXPORT jlong JNICALL Java_org_visp_core_VpMatrix_n_1vpMatrix__IID
+  (JNIEnv *, jclass, jint rows, jint cols, jdouble value){
+	return (jlong) new vpMatrix(rows, cols, value);
+}
+
+
+
+JNIEXPORT jint JNICALL Java_org_visp_core_VpMatrix_n_1cols
+  (JNIEnv *, jclass, jlong self){
+	vpMatrix* me = (vpMatrix*) self; //TODO: check for NULL
+	return me->getCols();
+}
+
+
+
+JNIEXPORT jint JNICALL Java_org_visp_core_VpMatrix_n_1rows
+  (JNIEnv *, jclass, jlong self){
+	vpMatrix* me = (vpMatrix*) self; //TODO: check for NULL
+	return me->getRows();
+}
+

@@ -33,6 +33,14 @@ JNIEXPORT jlong JNICALL Java_org_visp_core_VpMatrix_n_1vpMatrix__IID
 
 /*
  * Class:     org_visp_core_VpMatrix
+ * Method:    n_vpMatrix
+ * Signature: (JIIII)J
+ */
+JNIEXPORT jlong JNICALL Java_org_visp_core_VpMatrix_n_1vpMatrix__JIIII
+  (JNIEnv *, jclass, jlong, jint, jint, jint, jint);
+
+/*
+ * Class:     org_visp_core_VpMatrix
  * Method:    n_cols
  * Signature: (J)I
  */

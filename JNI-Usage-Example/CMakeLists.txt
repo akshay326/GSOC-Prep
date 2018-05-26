@@ -4,7 +4,7 @@ project(MyLib)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)   # Equivalent to -fPIC in cmd
 set(CMAKE_CXX_STANDARD 11)
 
-add_library(MyLib SHARED native.cpp)
+add_library(MyLib SHARED ../cpp/VpMatrix.cpp ../cpp/VpArray2D.cpp ../cpp/VpImage.cpp)
 
 # Change this argument according to your desktop
 # i've created a link to the .so files folder

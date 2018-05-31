@@ -1,6 +1,4 @@
-import org.visp.core.VpMatrix;
-import org.visp.core.VpArray2D;
-import org.visp.core.VpImage;
+import org.visp.core.*;
 
 public class MyClass {
 

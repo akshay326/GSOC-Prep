@@ -10,42 +10,42 @@ extern "C" {
 /*
  * Class:     org_visp_core_VpArray2D
  * Method:    n_VpArray2D
- * Signature: (Ljava/lang/String;)J
+ * Signature: ()J
  */
-JNIEXPORT jlong JNICALL Java_org_visp_core_VpArray2D_n_1VpArray2D__Ljava_lang_String_2
-  (JNIEnv *, jclass, jstring);
+JNIEXPORT jlong JNICALL Java_org_visp_core_VpArray2D_n_1VpArray2D__
+  (JNIEnv *, jclass);
 
 /*
  * Class:     org_visp_core_VpArray2D
  * Method:    n_VpArray2D
- * Signature: (Ljava/lang/String;II)J
+ * Signature: (II)J
  */
-JNIEXPORT jlong JNICALL Java_org_visp_core_VpArray2D_n_1VpArray2D__Ljava_lang_String_2II
-  (JNIEnv *, jclass, jstring, jint, jint);
+JNIEXPORT jlong JNICALL Java_org_visp_core_VpArray2D_n_1VpArray2D__II
+  (JNIEnv *, jclass, jint, jint);
 
 /*
  * Class:     org_visp_core_VpArray2D
  * Method:    n_VpArray2D
- * Signature: (Ljava/lang/String;IILjava/lang/String;)J
+ * Signature: (IID)J
  */
-JNIEXPORT jlong JNICALL Java_org_visp_core_VpArray2D_n_1VpArray2D__Ljava_lang_String_2IILjava_lang_String_2
-  (JNIEnv *, jclass, jstring, jint, jint, jstring);
+JNIEXPORT jlong JNICALL Java_org_visp_core_VpArray2D_n_1VpArray2D__IID
+  (JNIEnv *, jclass, jint, jint, jdouble);
 
 /*
  * Class:     org_visp_core_VpArray2D
  * Method:    n_cols
- * Signature: (Ljava/lang/String;J)I
+ * Signature: (J)I
  */
 JNIEXPORT jint JNICALL Java_org_visp_core_VpArray2D_n_1cols
-  (JNIEnv *, jclass, jstring, jlong);
+  (JNIEnv *, jclass, jlong);
 
 /*
  * Class:     org_visp_core_VpArray2D
  * Method:    n_rows
- * Signature: (Ljava/lang/String;J)I
+ * Signature: (J)I
  */
 JNIEXPORT jint JNICALL Java_org_visp_core_VpArray2D_n_1rows
-  (JNIEnv *, jclass, jstring, jlong);
+  (JNIEnv *, jclass, jlong);
 
 #ifdef __cplusplus
 }

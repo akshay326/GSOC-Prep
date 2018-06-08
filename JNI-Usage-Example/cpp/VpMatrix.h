@@ -55,6 +55,22 @@ JNIEXPORT jint JNICALL Java_org_visp_core_VpMatrix_n_1cols
 JNIEXPORT jint JNICALL Java_org_visp_core_VpMatrix_n_1rows
   (JNIEnv *, jclass, jlong);
 
+/*
+ * Class:     org_visp_core_VpMatrix
+ * Method:    n_transpose
+ * Signature: (JJ)V
+ */
+JNIEXPORT void JNICALL Java_org_visp_core_VpMatrix_n_1transpose
+  (JNIEnv *, jclass, jlong, jlong);
+
+/*
+ * Class:     org_visp_core_VpMatrix
+ * Method:    n_dump
+ * Signature: (J)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_org_visp_core_VpMatrix_n_1dump
+  (JNIEnv *, jclass, jlong);
+
 #ifdef __cplusplus
 }
 #endif

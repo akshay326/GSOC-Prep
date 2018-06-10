@@ -29,12 +29,15 @@ rename.ul 'org_visp_io_' '' *.h
 rename.ul 'org_visp_imgproc_' '' *.h
 cd ..
 
+# Ask for build paths and source paths
+read -p "Enter ViSP Source Dir Absolute Path: "  SRC_PATH
+read -p "Enter ViSP Build Dir Absolute Path: "  BUILD_PATH
 
 # Generating .so file. NOTE that original C++ code and native JNI code will hv their separate .so files
 rm -r build
 mkdir build
 cd build
-cmake ..
+cmake -DVISP_SRC_DIR:STRING=$SRC_PATH -DVISP_BUILD_DIR:STRING=$BUILD_PATH ..
 make -j4
 cd ..
 

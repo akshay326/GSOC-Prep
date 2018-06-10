@@ -1,7 +1,7 @@
 ## ViSP Java Development
 
 My aim is to generate a jar file and a .so c++ library that can be used later in editors like Eclipse
-To compile the given scripts, make a few changes in `CMakeLists.txt` :
+To compile the given scripts, either hit the `run.sh` script(it'll ask for necessary paths) **or** make a few changes in `CMakeLists.txt` :
 1. Change below line to ViSP's built libraries folder  
 ```set(VISP_LIB_DIR /home/akshay/Projects/Visp-WS/visp_build/lib)```
 2. Change below line to include ViSP's header files  

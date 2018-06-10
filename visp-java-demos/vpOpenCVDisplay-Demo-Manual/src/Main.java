@@ -1,3 +1,5 @@
+import org.visp.core.VpMatrix;
+import org.visp.core.VpCameraParameters;
 import org.visp.core.VpImageUChar;
 import org.visp.io.VpImageIo;
 import org.visp.gui.VpDisplayOpenCV;

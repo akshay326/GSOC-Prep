@@ -12,10 +12,9 @@ list(REMOVE_AT SRC_FILES 0) # Remove a Cmake file
 #endforeach()
 add_library(visp_java320 SHARED ${SRC_FILES})
 
-# TODO: Set these directories to make build work
-# TODO: Change these argument according to your desktop
-set(VISP_SRC_DIR /home/akshay/Projects/Visp-WS/visp)
-set(VISP_BUILD_DIR /home/akshay/Projects/Visp-WS/visp_build)
+# Read paths from calling command line
+set(VISP_SRC_DIR "" CACHE STRING "ViSP Source Directory Absolute Path")
+set(VISP_BUILD_DIR "" CACHE STRING "ViSP Build Directory Absolute Path")
 
 # Add library
 find_package(JNI REQUIRED)

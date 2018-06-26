@@ -1,6 +1,6 @@
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import javax.swing.*;
+import org.visp.core.VpImageUChar;
+import org.visp.gui.VpDisplay;
+import org.visp.io.VpImageIo;
 
 public class Main {
 
@@ -16,26 +16,11 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		JFrame f = new JFrame();
+		VpImageUChar imageUChar = new VpImageUChar();
+		VpImageIo.read(imageUChar, "/home/akshay/Projects/Visp-WS/mosaic.png");
 
-		f.addKeyListener(new KeyListener() {
-
-			@Override
-			public void keyTyped(KeyEvent arg0) {
-				if (arg0.getKeyChar() == 'q' || arg0.getKeyChar() == 27) // escape or q
-					System.exit(0);
-			}
-			@Override
-			public void keyReleased(KeyEvent arg0) {}
-			@Override
-			public void keyPressed(KeyEvent arg0) {}
-		});
-		
-		ImageIcon image = new ImageIcon("/home/akshay/Projects/Visp-WS/mosaic.png");
-		JLabel imageLabel = new JLabel(image); 
-		f.add(imageLabel);
-		f.pack(); // pack screen size to fit content
-		f.setVisible(true);
-		f.setFocusable(true);
+		VpDisplay vpDisplay = new VpDisplay();
+		vpDisplay.display(imageUChar);
+		vpDisplay.getClick();
 	}
 }

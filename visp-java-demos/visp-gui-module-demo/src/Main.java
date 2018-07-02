@@ -15,6 +15,7 @@ public class Main {
 
 		VpDisplay vpDisplay = new VpDisplay();
 		vpDisplay.display(imageRGBa);
+		vpDisplay.displayLine(imageRGBa,0,0,imageRGBa.cols(),imageRGBa.rows());
 		vpDisplay.getClick();
 		
 		VpImageUChar imageUChar = new VpImageUChar();

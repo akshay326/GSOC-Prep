@@ -16,10 +16,11 @@ public class Main {
 		VpImageIo.read(imageRGBa, "monkey.png");
 
 		VpDisplay vpDisplay = new VpDisplay();
-//		vpDisplay.display(imageRGBa);
-//		vpDisplay.displayLine(imageRGBa,0,0,imageRGBa.cols(),imageRGBa.rows());
+		vpDisplay.display(imageRGBa);
 		int padding = 10;
-		vpDisplay.displayArrow(imageRGBa,padding,padding,imageRGBa.cols()-padding,imageRGBa.rows()-padding, Color.GREEN, 2*padding, 4*padding, 4);
+		vpDisplay.displayArrow(padding,padding,imageRGBa.cols()-padding,imageRGBa.rows()-padding, Color.GREEN, 2*padding, 4*padding, 4);
+		vpDisplay.displayText("This is a color image", 0, imageRGBa.rows() - padding);
+		vpDisplay.flush();
 		vpDisplay.getClick();
 		
 		VpImageUChar imageUChar = new VpImageUChar();
@@ -27,6 +28,8 @@ public class Main {
 
 		VpDisplay vpDisplay2 = new VpDisplay();
 		vpDisplay2.display(imageUChar);
+		vpDisplay2.displayLine(0,0,imageUChar.cols(),imageUChar.rows(), Color.WHITE);
+		vpDisplay2.flush();
 		vpDisplay2.getClick();
 	}
 }

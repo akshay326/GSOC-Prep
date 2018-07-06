@@ -14,7 +14,6 @@ public class Main {
 		// VpMatrix
 		VpMatrix vp = new VpMatrix(2,3,1.5);
 		System.out.println(vp.transpose());
-		System.out.println(vp.cols() + "" + vp.rows());
 		
 		// VpColVector
 		VpColVector vpColVector = new VpColVector(10,1.5);

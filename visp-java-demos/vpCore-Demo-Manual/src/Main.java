@@ -13,6 +13,7 @@ public class Main {
 	public static void main(String[] args) {
 		// VpMatrix
 		VpMatrix vp = new VpMatrix(2,3,1.5);
+		System.out.println(vp.getCol(0));
 		System.out.println(vp.transpose());
 		
 		// VpColVector

@@ -15,9 +15,9 @@ public class Main {
 	
 	public static void main(String[] args) {
 		VpImageUChar imageUChar = new VpImageUChar();	
-		VpImageIo.read(imageUChar, "sample.png");
+		VpImageIo.read(imageUChar, "AprilTag.pgm");
 		VpImageRGBa colorImage = new VpImageRGBa();	
-		VpImageIo.read(colorImage, "sample.png");
+		VpImageIo.read(colorImage, "AprilTag.pgm");
 		
 		System.out.println(imageUChar.cols() + "x" + imageUChar.rows());
 		

@@ -1,0 +1,533 @@
+-- The C compiler identification is GNU 4.9.0
+-- The CXX compiler identification is GNU 4.9.0
+-- Check for working C compiler: /home/akshay/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc
+-- Check for working C compiler: /home/akshay/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /home/akshay/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++
+-- Check for working CXX compiler: /home/akshay/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PythonInterp: /usr/bin/python2.7 (found suitable version "2.7.15", minimum required is "2.7") 
+-- Found PythonInterp: /home/akshay/Downloads/miniconda3/bin/python3 (found suitable version "3.6.5", minimum required is "3.4") 
+-- Looking for inet_ntop
+-- Looking for inet_ntop - found
+-- Could NOT find OpenGL (missing: OPENGL_opengl_LIBRARY OPENGL_glx_LIBRARY OPENGL_INCLUDE_DIR) 
+-- Try C99 flag = [-std=gnu99]
+-- Performing Test C99_FLAG_DETECTED
+-- Performing Test C99_FLAG_DETECTED - Success
+-- Performing Test __compiler_doesnt_need_c99_flag
+-- Performing Test __compiler_doesnt_need_c99_flag - Failed
+-- Found OpenMP_C: -fopenmp (found version "4.0") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.0") 
+-- Found OpenMP: TRUE (found version "4.0")  
+-- openmp found
+-- OGRE_PREFIX_WATCH changed.
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+-- Try C++11 flag = [-std=c++11]
+-- Performing Test CPP11_FLAG_DETECTED
+-- Performing Test CPP11_FLAG_DETECTED - Success
+-- Found CPP11: -std=c++11  
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - found
+-- Found Threads: TRUE  
+-- threads found
+-- Found ZLIB: /home/akshay/Android/Sdk/ndk-bundle/platforms/android-14/arch-arm/usr/lib/libz.so (found version "1.2.3") 
+-- zlib found
+-- Could NOT find JPEG (missing: JPEG_LIBRARY JPEG_INCLUDE_DIR) 
+-- Could NOT find PNG (missing: PNG_LIBRARY PNG_PNG_INCLUDE_DIR) 
+-- Looking for include file float.h
+-- Looking for include file float.h - found
+-- Performing Test HAVE_FUNC_ISNAN
+-- Performing Test HAVE_FUNC_ISNAN - Success
+-- Performing Test HAVE_FUNC_STD_ISNAN
+-- Performing Test HAVE_FUNC_STD_ISNAN - Success
+-- Performing Test HAVE_FUNC__ISNAN
+-- Performing Test HAVE_FUNC__ISNAN - Failed
+-- Performing Test HAVE_FUNC_ISINF
+-- Performing Test HAVE_FUNC_ISINF - Failed
+-- Performing Test HAVE_FUNC_STD_ISINF
+-- Performing Test HAVE_FUNC_STD_ISINF - Success
+-- Performing Test HAVE_FUNC__FINITE
+-- Performing Test HAVE_FUNC__FINITE - Failed
+-- Performing Test HAVE_FUNC_ROUND
+-- Performing Test HAVE_FUNC_ROUND - Success
+-- Performing Test HAVE_FUNC_STD_ROUND
+-- Performing Test HAVE_FUNC_STD_ROUND - Failed
+-- Performing Test HAVE_FUNC_ERFC
+-- Performing Test HAVE_FUNC_ERFC - Success
+-- Performing Test HAVE_FUNC_STD_ERFC
+-- Performing Test HAVE_FUNC_STD_ERFC - Failed
+-- Performing Test HAVE_FUNC_STRTOF
+-- Performing Test HAVE_FUNC_STRTOF - Success
+-- Performing Test HAVE_FUNC_LOG1P
+-- Performing Test HAVE_FUNC_LOG1P - Success
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Performing Test HAVE_C_WNO_LOGICAL_OP_PARENTHESES
+-- Performing Test HAVE_C_WNO_LOGICAL_OP_PARENTHESES - Success
+-- Performing Test HAVE_C_WNO_SHIFT_OP_PARENTHESES
+-- Performing Test HAVE_C_WNO_SHIFT_OP_PARENTHESES - Success
+-- Performing Test HAVE_C_WNO_PARENTHESES
+-- Performing Test HAVE_C_WNO_PARENTHESES - Success
+-- Performing Test HAVE_C_WNO_FORMAT_EXTRA_ARGS
+-- Performing Test HAVE_C_WNO_FORMAT_EXTRA_ARGS - Success
+-- Performing Test HAVE_C_WNO_FORMAT
+-- Performing Test HAVE_C_WNO_FORMAT - Success
+-- Performing Test HAVE_C_WNO_SIGN_COMPARE
+-- Performing Test HAVE_C_WNO_SIGN_COMPARE - Success
+-- Performing Test HAVE_C_WNO_UNINITIALIZED
+-- Performing Test HAVE_C_WNO_UNINITIALIZED - Success
+-- Performing Test HAVE_C_WNO_UNUSED_BUT_SET_VARIABLE
+-- Performing Test HAVE_C_WNO_UNUSED_BUT_SET_VARIABLE - Success
+-- Performing Test HAVE_C_WNO_UNUSED_PARAMETER
+-- Performing Test HAVE_C_WNO_UNUSED_PARAMETER - Success
+-- Performing Test HAVE_C_WNO_UNUSED_VARIABLE
+-- Performing Test HAVE_C_WNO_UNUSED_VARIABLE - Success
+-- Performing Test HAVE_C_WNO_DEPRECATED
+-- Performing Test HAVE_C_WNO_DEPRECATED - Success
+-- Performing Test HAVE_C_WNO_FLOAT_EQUAL
+-- Performing Test HAVE_C_WNO_FLOAT_EQUAL - Success
+-- Performing Test HAVE_C_WNO_STRICT_OVERFLOW
+-- Performing Test HAVE_C_WNO_STRICT_OVERFLOW - Success
+-- Performing Test HAVE_C_WNO_TYPE_LIMITS
+-- Performing Test HAVE_C_WNO_TYPE_LIMITS - Success
+-- Performing Test HAVE_C_WNO_SHIFT_NEGATIVE_VALUE
+-- Performing Test HAVE_C_WNO_SHIFT_NEGATIVE_VALUE - Success
+-- Update variable ANDROID_SDK from environment: /home/akshay/Android/Sdk
+-- Android SDK Tools: ver. 25.0.4
+-- Android SDK Build Tools: ver. 27.0.3 (subdir 27.0.3 from 24.0.1;25.0.2;25.0.3;26.0.1;26.0.2;27.0.1;27.0.3)
+-- Found apache ant: /usr/bin/ant (1.10.3)
+-- Android SDK Tools: Ant (Eclipse) builds are supported
+-- Android SDK Tools: Prepare Android projects for using Ant build scripts (deprecated)
+-- Android SDK Tools: Found 'android' tool: /home/akshay/Android/Sdk/tools/android
+-- Android SDK Tools: Available targets: android-18;android-24;android-26;android-27
+-- Performing Test HAVE_CXX_WALL
+-- Performing Test HAVE_CXX_WALL - Success
+-- Performing Test HAVE_C_WALL
+-- Performing Test HAVE_C_WALL - Success
+-- Performing Test HAVE_CXX_WEXTRA
+-- Performing Test HAVE_CXX_WEXTRA - Success
+-- Performing Test HAVE_C_WEXTRA
+-- Performing Test HAVE_C_WEXTRA - Success
+-- Performing Test HAVE_CXX_WSTRICT_OVERFLOW_5
+-- Performing Test HAVE_CXX_WSTRICT_OVERFLOW_5 - Success
+-- Performing Test HAVE_C_WSTRICT_OVERFLOW_5
+-- Performing Test HAVE_C_WSTRICT_OVERFLOW_5 - Success
+-- Performing Test HAVE_CXX_WFLOAT_EQUAL
+-- Performing Test HAVE_CXX_WFLOAT_EQUAL - Success
+-- Performing Test HAVE_C_WFLOAT_EQUAL
+-- Performing Test HAVE_C_WFLOAT_EQUAL - Success
+-- Performing Test HAVE_CXX_WSIGN_CONVERSION
+-- Performing Test HAVE_CXX_WSIGN_CONVERSION - Success
+-- Performing Test HAVE_C_WSIGN_CONVERSION
+-- Performing Test HAVE_C_WSIGN_CONVERSION - Success
+-- Performing Test HAVE_CXX_FOPENMP
+-- Performing Test HAVE_CXX_FOPENMP - Success
+-- Performing Test HAVE_C_FOPENMP
+-- Performing Test HAVE_C_FOPENMP - Success
+-- Performing Test HAVE_CXX_FVISIBILITY_HIDDEN
+-- Performing Test HAVE_CXX_FVISIBILITY_HIDDEN - Success
+-- Performing Test HAVE_C_FVISIBILITY_HIDDEN
+-- Performing Test HAVE_C_FVISIBILITY_HIDDEN - Success
+-- Performing Test HAVE_CXX_FPIC
+-- Performing Test HAVE_CXX_FPIC - Success
+-- Performing Test HAVE_C_FPIC
+-- Performing Test HAVE_C_FPIC - Success
+-- Performing Test HAVE_CXX_WNO_UNUSED_PARAMETER
+-- Performing Test HAVE_CXX_WNO_UNUSED_PARAMETER - Success
+-- Performing Test HAVE_CXX_WNO_STRICT_OVERFLOW
+-- Performing Test HAVE_CXX_WNO_STRICT_OVERFLOW - Success
+-- [ViSP for Android SDK]: A new OpenGL Camera Bridge (CameraGLSurfaceView, CameraGLRendererBase, CameraRenderer, Camera2Renderer) is disabled, because ANDROID_SDK_TARGET (18) < 21
+-- Performing Test HAVE_CXX_WNO_SIGN_CONVERSION
+-- Performing Test HAVE_CXX_WNO_SIGN_CONVERSION - Success
+-- 
+-- ==========================================================
+-- General configuration information for ViSP 3.2.0
+-- 
+--   Version control:               unknown
+-- 
+--   Platform:
+--     Timestamp:                   2018-07-17T08:08:37Z
+--     Host:                        Linux 4.15.0-24-generic x86_64
+--     Target:                      Android 1 armv7-a
+--     CMake:                       3.11.0
+--     CMake generator:             Ninja
+--     CMake build tool:            /usr/bin/ninja-build
+--     Configuration:               Release
+-- 
+--   C/C++:
+--     Built as dynamic libs?:      no
+--     C++ Compiler:                /home/akshay/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++  (ver 4.9.0)
+--     C++ flags (Release):         -isystem /home/akshay/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security    -Wall -Wextra -fopenmp -fvisibility=hidden -fPIC -Os -DNDEBUG 
+--     C++ flags (Debug):           -isystem /home/akshay/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security    -Wall -Wextra -fopenmp -fvisibility=hidden -fPIC -O0 
+--     C Compiler:                  /home/akshay/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc
+--     C flags (Release):           -isystem /home/akshay/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security   -Wall -Wextra -fopenmp -fvisibility=hidden -fPIC -Os -DNDEBUG 
+--     C flags (Debug):             -isystem /home/akshay/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security   -Wall -Wextra -fopenmp -fvisibility=hidden -fPIC -O0 
+--     Linker flags (Release):      -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libatomic.a --sysroot /home/akshay/Android/Sdk/ndk-bundle/platforms/android-14/arch-arm -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now 
+--     Linker flags (Debug):        -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libatomic.a --sysroot /home/akshay/Android/Sdk/ndk-bundle/platforms/android-14/arch-arm -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now 
+-- 
+--   ViSP modules:
+--     To be built:                 core gui imgproc io java java_bindings_generator klt me sensor ar blob robot visual_features vs vision detection mbt tt tt_mi
+--     Disabled:                    -
+--     Disabled by dependency:      -
+--     Unavailable:                 -
+-- 
+--   Android NDK:                   /home/akshay/Android/Sdk/ndk-bundle (ver 16.1.4479499)
+--     Android ABI:                 armeabi-v7a
+--     NDK toolchain:               arm-linux-androideabi-4.9
+--     STL type:                    gnustl_static
+--     Native API level:            14
+--   Android SDK:                   /home/akshay/Android/Sdk (tools: 25.0.4 build tools: 27.0.3)
+--     android tool:                /home/akshay/Android/Sdk/tools/android
+--     SDK target:                  android-18
+--     Projects build scripts:      Ant/Eclipse compatible
+-- 
+--   Python (for build):            /usr/bin/python2.7
+-- 
+--   Java:                          export all functions
+--     ant:                         /usr/bin/ant (ver 1.10.3)
+-- 
+--   Build options: 
+--     Build deprecated:            yes
+--     Build with moment combine:   no
+-- 
+--   Mathematics: 
+--     Use Lapack/blas:             no
+--     Use Lapack (built-in):       yes (ver 3.2.1)
+--     Use Eigen3:                  no
+--     Use OpenCV:                  no
+--     Use GSL:                     no
+-- 
+--   Simulator: 
+--     Ogre simulator: 
+--     \- Use Ogre3D:               no
+--     \- Use OIS:                  no
+--     Coin simulator: 
+--     \- Use Coin3D:               no
+--     \- Use SoWin:                no
+--     \- Use SoXt:                 no
+--     \- Use SoQt:                 no
+--     \- Use Qt4:                  no
+--     \- Use Qt3:                  no
+-- 
+--   Media I/O: 
+--     Use JPEG:                    no
+--     Use PNG:                     no
+--     \- Use ZLIB:                 yes (ver 1.2.3)
+--     Use OpenCV:                  no
+-- 
+--   Real robots: 
+--     Use Afma4:                   no
+--     Use Afma6:                   no
+--     Use Franka:                  no
+--     Use Viper650:                no
+--     Use Viper850:                no
+--     Use aria (Pioneer):          no
+--     Use PTU46:                   no
+--     Use Biclops PT:              no
+-- 
+--   GUI: 
+--     Use X11:                     no
+--     Use GTK:                     no
+--     Use OpenCV:                  no
+--     Use GDI:                     no
+--     Use Direct3D:                no
+-- 
+--   Cameras: 
+--     Use DC1394-2.x:              no
+--     Use CMU 1394:                no
+--     Use V4L2:                    no
+--     Use directshow:              no
+--     Use OpenCV:                  no
+--     Use Flycapture:              no
+--     Use Pylon:                   no
+-- 
+--   RGB-D sensors: 
+--     Use Realsense:               no
+--     Use Realsense2:              no
+--     \- Use PCL:                  no
+--        \- Use VTK:               no
+--     Use Kinect:                  no
+--     \- Use libfreenect:          no
+--     \- Use libusb-1:             no
+--     \- Use pthread:              yes
+-- 
+--   F/T sensors: 
+--     Use atidaq (built-in):       no
+--     Use comedi:                  no
+-- 
+--   Detection: 
+--     Use zbar:                    no
+--     Use dmtx:                    no
+--     Use AprilTag (built-in):     yes (ver 0.9.8)
+-- 
+--   Misc: 
+--     Use Clipper (built-in):      no
+--     Use XML2:                    no
+-- 
+--   Optimization: 
+--     Use OpenMP:                  yes
+--     Use pthread:                 yes
+--     Use pthread (built-in):      no
+--     Use cxx11:                   no
+-- 
+--   Documentation: 
+--     Use doxygen:                 no
+-- 
+--   Tests and samples:
+--     Tests:                       no
+--     Demos:                       no
+--     Examples:                    no
+--     Tutorials:                   no
+-- 
+--   Install path:                  /home/akshay/Projects/GSOC/BuildVispAndroid/build/o4a/install
+-- 
+-- ==========================================================
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/akshay/Projects/GSOC/BuildVispAndroid/build/o4a
+[1/500] Generating doc/man/man1/visp-config.1.gz
+[2/500] Generate visp-config
+[3/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlarf.c.o
+[4/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dtrti2.c.o
+[5/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgelq2.c.o
+[6/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgebd2.c.o
+[7/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgebrd.c.o
+[8/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dbdsdc.c.o
+[9/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgelqf.c.o
+[10/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgeqr2.c.o
+[11/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgeqp3.c.o
+[12/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgeqrf.c.o
+[13/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgetf2.c.o
+[14/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgetrf.c.o
+[15/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/disnan.c.o
+[16/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlacpy.c.o
+[17/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgetri.c.o
+[18/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlamrg.c.o
+[19/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlaisnan.c.o
+[20/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlaed6.c.o
+[21/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlange.c.o
+[22/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlapy2.c.o
+[23/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlanst.c.o
+[24/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dbdsqr.c.o
+[25/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlas2.c.o
+[26/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlaqp2.c.o
+[27/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlabrd.c.o
+[28/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlaqps.c.o
+[29/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlarfg.c.o
+[30/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlarfp.c.o
+[31/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlartg.c.o
+[32/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dgesdd.c.o
+[33/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlarft.c.o
+[34/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasd1.c.o
+[35/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasd0.c.o
+[36/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlascl.c.o
+[37/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasr.c.o
+[38/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasd5.c.o
+[39/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlarfb.c.o
+[40/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasd6.c.o
+[41/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasd3.c.o
+[42/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasd2.c.o
+[43/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasd8.c.o
+[44/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasda.c.o
+[45/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasdt.c.o
+[46/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasdq.c.o
+[47/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasd7.c.o
+[48/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlaset.c.o
+[49/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasq1.c.o
+[50/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasq4.c.o
+[51/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasq3.c.o
+[52/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasq5.c.o
+[53/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/ddot.c.o
+[54/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasq6.c.o
+[55/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasd4.c.o
+[56/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlassq.c.o
+[57/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasq2.c.o
+[58/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasrt.c.o
+[59/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlauu2.c.o
+[60/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlaswp.c.o
+[61/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlasv2.c.o
+[62/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dlauum.c.o
+[63/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dorg2r.c.o
+[64/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dorm2r.c.o
+[65/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dorglq.c.o
+[66/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dorgl2.c.o
+[67/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dorgqr.c.o
+[68/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dorgbr.c.o
+[69/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dormbr.c.o
+[70/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dorml2.c.o
+[71/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dormlq.c.o
+[72/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dormqr.c.o
+[73/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dpotf2.c.o
+[74/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dpotri.c.o
+[75/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dpotrf.c.o
+[76/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/i_dnnt.c.o
+[77/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/iladlc.c.o
+[78/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/iladlr.c.o
+[79/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/ieeeck.c.o
+[80/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/dtrtri.c.o
+[81/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/iparmq.c.o
+[82/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/xerbla.c.o
+[83/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dcopy.c.o
+[84/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dger.c.o
+[85/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dnrm2.c.o
+[86/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/src/ilaenv.c.o
+[87/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dgemv.c.o
+[88/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/drot.c.o
+[89/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dscal.c.o
+[90/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/close.c.o
+[91/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dgemm.c.o
+[92/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dswap.c.o
+[93/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/lsame.c.o
+[94/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dtrmv.c.o
+[95/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/idamax.c.o
+[96/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/d_sign.c.o
+[97/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dsyrk.c.o
+[98/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dtrmm.c.o
+[99/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/exit_.c.o
+[100/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/err.c.o
+[101/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/endfile.c.o
+[102/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/blas/dtrsm.c.o
+[103/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/f77_aloc.c.o
+[104/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/i_nint.c.o
+[105/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/fmtlib.c.o
+[106/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/install/dlamch.c.o
+[107/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/s_cat.c.o
+[108/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/lwrite.c.o
+[109/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/pow_di.c.o
+[110/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/pow_dd.c.o
+[111/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/open.c.o
+[112/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/pow_ii.c.o
+[113/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/sfe.c.o
+[114/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/fmt.c.o
+[115/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/s_cmp.c.o
+[116/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/s_copy.c.o
+[117/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/util.c.o
+[118/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/s_stop.c.o
+[119/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/sig_die.c.o
+[120/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/wsfe.c.o
+[121/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/wref.c.o
+[122/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/image_u8x3.c.o
+[123/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/pam.c.o
+[124/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/image_u8x4.c.o
+[125/500] Building C object 3rdparty/clapack/CMakeFiles/visp_lapack.dir/f2c/wrtfmt.c.o
+[126/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/tag16h5.c.o
+[127/500] Linking C static library 3rdparty/lib/libvisp_lapack.a
+[128/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/tag25h9.c.o
+[129/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/tag25h7.c.o
+[130/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/apriltag_quad_thresh.c.o
+[131/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/apriltag.c.o
+[132/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/tag36artoolkit.c.o
+[133/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/g2d.c.o
+[134/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/pjpeg.c.o
+[135/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/matd.c.o
+[136/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/svd22.c.o
+[137/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/image_f32.c.o
+[138/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/homography.c.o
+[139/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/tag36h11.c.o
+[140/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/times.c.o
+[141/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/pnm.c.o
+[142/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/pjpeg-idct.c.o
+[143/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/time_util.c.o
+[144/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/zarray.c.o
+[145/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/string_util.c.o
+[146/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/workerpool.c.o
+[147/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/zhash.c.o
+[148/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/image_u8.c.o
+[149/500] Building CXX object 3rdparty/apriltag/CMakeFiles/visp_apriltag.dir/common/zmaxheap.c.o
+[150/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tracking/forward-projection/vpForwardProjection.cpp.o
+[151/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tracking/forward-projection/vpLine.cpp.o
+[152/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tracking/moments/vpMomentDatabase.cpp.o
+[153/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tracking/moments/vpMomentGravityCenter.cpp.o
+[154/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tracking/moments/vpMomentCommon.cpp.o
+[155/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/camera/vpXmlParserCamera.cpp.o
+[156/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/camera/vpMeterPixelConversion.cpp.o
+[157/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/display/vpFeatureDisplay.cpp.o
+[158/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/camera/vpPixelMeterConversion.cpp.o
+[159/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/display/vpColor.cpp.o
+[160/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/camera/vpCameraParameters.cpp.o
+[161/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/image/vpRGBa.cpp.o
+[162/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/display/vpDisplay.cpp.o
+[163/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/kalman/vpLinearKalmanFilterInstantiation.cpp.o
+[164/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/display/vpDisplay_rgba.cpp.o
+[165/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/display/vpDisplay_uchar.cpp.o
+[166/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/image/vpImageMorphology.cpp.o
+[167/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/image/vpImagePoint.cpp.o
+[168/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpMatrix_mul.cpp.o
+[169/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/image/vpImageFilter.cpp.o
+[170/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/kalman/vpKalmanFilter.cpp.o
+[171/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/image/vpImageTools.cpp.o
+/home/akshay/Projects/Visp-WS/visp/modules/core/src/image/vpImageTools.cpp: In static member function 'static double vpImageTools::normalizedCorrelation(const vpImage<double>&, const vpImage<double>&, bool)':
+/home/akshay/Projects/Visp-WS/visp/modules/core/src/image/vpImageTools.cpp:416:17: warning: unused variable 'ptr_I1' [-Wunused-variable]
+   const double *ptr_I1 = I1.bitmap;
+                 ^
+/home/akshay/Projects/Visp-WS/visp/modules/core/src/image/vpImageTools.cpp:417:17: warning: unused variable 'ptr_I2' [-Wunused-variable]
+   const double *ptr_I2 = I2.bitmap;
+                 ^
+/home/akshay/Projects/Visp-WS/visp/modules/core/src/image/vpImageTools.cpp: At global scope:
+/home/akshay/Projects/Visp-WS/visp/modules/core/src/image/vpImageTools.cpp:401:55: warning: unused parameter 'useOptimized' [-Wunused-parameter]
+                                            const bool useOptimized)
+                                                       ^
+[172/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpMatrix_cholesky.cpp.o
+[173/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/image/vpImageConvert.cpp.o
+[174/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpMatrix_covariance.cpp.o
+[175/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpMatrix_lu.cpp.o
+[176/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpMatrix_svd.cpp.o
+[177/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpColVector.cpp.o
+[178/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpSubColVector.cpp.o
+[179/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/random-generator/vpGaussRand.cpp.o
+[180/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpSubRowVector.cpp.o
+[181/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpMatrix_qr.cpp.o
+[182/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpSubMatrix.cpp.o
+[183/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/misc/vpHinkley.cpp.o
+[184/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpMatrix.cpp.o
+[185/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/random-generator/vpUniRand.cpp.o
+[186/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/matrix/vpRowVector.cpp.o
+[187/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpForceTwistMatrix.cpp.o
+[188/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/misc/vpMath.cpp.o
+[189/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpExponentialMap.cpp.o
+[190/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/robust/vpRobust.cpp.o
+[191/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/robust/vpScale.cpp.o
+[192/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/spline/vpBSpline.cpp.o
+[193/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpQuaternionVector.cpp.o
+[194/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpPoseVector.cpp.o
+[195/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpRotationMatrix.cpp.o
+[196/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpRotationVector.cpp.o
+[197/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpHomogeneousMatrix.cpp.o
+[198/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpRzyxVector.cpp.o
+[199/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpRzyzVector.cpp.o
+[200/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpRxyzVector.cpp.o
+[201/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpXmlParserHomogeneousMatrix.cpp.o
+[202/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/cpu-features/vpCPUFeatures.cpp.o
+[203/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpTranslationVector.cpp.o
+[204/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpThetaUVector.cpp.o
+[205/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/cpu-features/x86/cpu_x86.cpp.o
+[206/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/geometry/vpRectOriented.cpp.o
+[207/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/exceptions/vpException.cpp.o
+[208/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/convert/vpConvert.cpp.o
+[209/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/math/transformation/vpVelocityTwistMatrix.cpp.o
+[210/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/geometry/vpXmlParserRectOriented.cpp.o
+[211/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/geometry/vpPlane.cpp.o
+[212/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/geometry/vpRect.cpp.o
+[213/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/histogram/vpHistogramValey.cpp.o
+[214/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/geometry/vpTriangle.cpp.o
+[215/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/geometry/vpPolygon.cpp.o
+[216/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/file/vpIoTools.cpp.o
+/home/akshay/Projects/Visp-WS/visp/modules/core/src/tools/file/vpIoTools.cpp:127:6: warning: 'void {anonymous}::replaceAll(std::string&, const string&, const string&)' defined but not used [-Wunused-function]
+ void replaceAll(std::string &str, const std::string &search, const std::string &replace)
+      ^
+[217/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/histogram/vpHistogramPeak.cpp.o
+[218/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/geometry/vpPolygon3D.cpp.o
+[219/500] Building CXX object modules/core/CMakeFiles/visp_core.dir/src/tools/network/vpUDPClient.cpp.o
+Package configuration:
+================================================================================
+ABIs = [
+    ABI("2", "armeabi-v7a", "arm-linux-androideabi-4.9", cmake_vars=dict(ANDROID_ABI='armeabi-v7a with NEON'))
+]
+================================================================================

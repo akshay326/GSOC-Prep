@@ -14,12 +14,11 @@
 * [Language Specifics](#language-specifics)
     * [C/C++](#cc) | [Java](#java) | [Miscellaneous](#miscellaneous)
 * [Tools](#tools)
-    * [IDEs](#ides) | [Personal use](#personal-use) | [Contest Preparation](#contest-preparation)
+    * [Personal use](#personal-use) | [Contest Preparation](#contest-preparation)
 * [Community](#community)
     * [Blogs](#blogs) | [Youtube and Livestreams](#youtube-and-livestreams) | [Quora](#quora)
 * [Other Awesome Resources](#other-awesome-resources) 
-    * [Articles](#articles) | [FAQs](#faqs) | [Awesome Lists](#awesome-lists) | [Interview Questions](#interview-questions)
-* [License](#license)
+    * [Articles](#articles) | [FAQs](#faqs) | [Awesome Lists](#awesome-lists)
 
 
 ## List of Lists
@@ -356,17 +355,3 @@ Learn helpful tips, tutorials and insights from these people :)
 | Courses | [prakhar1989/awesome-courses](https://github.com/prakhar1989/awesome-courses) |
 | Free Programming Books | [vhf/free-programming-books](https://github.com/EbookFoundation/free-programming-books) |
 | Community-curated C++ Resources | [Hackr.io](https://hackr.io/tutorials/learn-c-plus-plus) |
-
-### Interview Questions
-| Name | Description |
-| --- | --- |
-| [CareerCup](https://www.careercup.com) | The most popular website for software engineering interview preparation. | 
-| [InterviewBit](https://www.interviewbit.com) | Features intriguing and refreshing game-play designs which are designed to invoke one's interest in practicing. |
-| [Awesome Interviews](https://github.com/MaximAbramchuck/awesome-interview-questions) | A curated list of awesome interview questions |
-
-
-## License
-
-[![Creative Commons Attribution 4.0 International](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
-
-Awesome Competitive Programming is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

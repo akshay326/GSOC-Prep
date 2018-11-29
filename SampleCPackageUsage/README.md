@@ -345,13 +345,10 @@ Learn helpful tips, tutorials and insights from these people :)
 | Name | Link |
 | --- | --- |
 | C++ Books | [The Definitive C++ Book Guide and List - Stack Overflow](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
-| Java Books | [What are the best books to learn Java? - Quora](https://www.quora.com/What-are-the-best-books-to-learn-Java) |
-| Advanced Java Books | [What is the best book for advanced Java programming? - Quora](https://www.quora.com/What-is-the-best-book-for-advanced-Java-programming) |
 | Algorithms | [tayllan/awesome-algorithms](https://github.com/tayllan/awesome-algorithms) |
 | Algorithm Visualization | [enjalot/algovis](https://github.com/enjalot/algovis) |
 | Math | [rossant/awesome-math](https://github.com/rossant/awesome-math) |
 | C++ | [fffaraz/awesome-cpp](https://github.com/fffaraz/awesome-cpp) |
-| Java | [akullpp/awesome-java](https://github.com/akullpp/awesome-java) |
 | Courses | [prakhar1989/awesome-courses](https://github.com/prakhar1989/awesome-courses) |
 | Free Programming Books | [vhf/free-programming-books](https://github.com/EbookFoundation/free-programming-books) |
 | Community-curated C++ Resources | [Hackr.io](https://hackr.io/tutorials/learn-c-plus-plus) |

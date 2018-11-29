@@ -18,7 +18,7 @@
 * [Community](#community)
     * [Blogs](#blogs) | [Youtube and Livestreams](#youtube-and-livestreams) | [Quora](#quora)
 * [Other Awesome Resources](#other-awesome-resources) 
-    * [Articles](#articles) | [FAQs](#faqs) | [Awesome Lists](#awesome-lists)
+    * [Articles](#articles) | [Awesome Lists](#awesome-lists)
 
 
 ## List of Lists
@@ -328,16 +328,6 @@ Learn helpful tips, tutorials and insights from these people :)
 | [How to prepare for ACM - ICPC? - GeeksforGeeks](http://www.geeksforgeeks.org/how-to-prepare-for-acm-icpc/), by Vishwesh Shrimali |
 | [Complete reference to competitive programming - HackerEarth](https://www.hackerearth.com/getstarted-competitive-programming/), by Ravi Ojha |
 | [Getting started with the sport of competitive programming - HackerEarth](https://www.hackerearth.com/practice/notes/getting-started-with-the-sport-of-programming/), by Triveni Mahatha |
-
-### FAQs
-> Fine answers to frequently-asked questions 
-
-| Question |
-| --- |
-| [How do I start competitive programming? - Quora](https://www.quora.com/How-do-I-start-competitive-programming-5) |
-| [How can I become good at competitive programming? - Quora](https://www.quora.com/How-can-I-become-good-at-competitive-programming-Are-there-any-courses-that-will-take-me-one-step-forward-before-I-start-doing-SPOJ-or-TopCoder-problems) ... [What is the best strategy to improve my skills in competitive programming in 2-3 months? - Quora](https://www.quora.com/What-is-the-best-strategy-to-improve-my-skills-in-competitive-programming-in-2-3-months) ... [What is a good 6 month plan to start and progress through competitive programming? - Quora](https://www.quora.com/What-is-a-good-6-month-plan-to-start-and-progress-through-competitive-programming) |
-| [How is competitive programming different from real-life programming? - Quora](https://www.quora.com/How-is-competitive-programming-different-from-real-life-programming) |
-| [What have you gained from competitive programming? - Quora](https://www.quora.com/What-have-you-gained-from-competitive-programming) |
 
 ### Awesome Lists
 > Relevant awesome lists

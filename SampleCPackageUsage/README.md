@@ -17,7 +17,7 @@
 * [Community](#community)
     * [Blogs](#blogs) | [Youtube and Livestreams](#youtube-and-livestreams) | [Quora](#quora)
 * [Other Awesome Resources](#other-awesome-resources) 
-    * [Articles](#articles) | [Awesome Lists](#awesome-lists)
+    * [Articles](#articles)
 
 
 ## List of Lists
@@ -257,13 +257,6 @@ Learn helpful tips, tutorials and insights from these people :)
 | Mikhail Tikhomirov (Endagorion) | [Youtube](https://www.youtube.com/user/Endagorion/) |
 
 ### Quora
-> Visit [Competitive Programming - Quora](https://www.quora.com/topic/Competitive-Programming) ([Top 10 Most Viewed Writers](https://www.quora.com/topic/Competitive-Programming/writers)).
-
-| Important Community Figures | Description |
-| --- | --- |
-| [Bill Poucher](https://www.quora.com/profile/Bill-Poucher) | Executive Director of [ACM-ICPC](https://icpc.baylor.edu). CS Professor at Baylor University. | 
-| [Michal Forišek (misof)](https://www.quora.com/profile/Michal-Fori%C5%A1ek) | Organizer of [IPSC](https://ipsc.ksp.sk) and [IOI](http://ioinformatics.org/). CS Teacher at Comenius University in Slovakia. Algorithm and CS Education Researcher. Former highly-rated competitive programmer. |
-| [Ahmed Aly (ahmed_aly)](https://www.quora.com/profile/Ahmed-Aly) | Founder of [A2OJ](https://www.quora.com/profile/Ahmed-Aly). [HackerRank](https://www.hackerrank.com) Lead Software Engineer. Former member of the [Google Code Jam](https://code.google.com/codejam/) team. |
 
 | Competitive Programmers |  |  |  
 | --- | --- | --- |  
@@ -273,31 +266,10 @@ Learn helpful tips, tutorials and insights from these people :)
 | [Cosmin Negruseri](https://www.quora.com/profile/Cosmin-Negruseri) | [Lalit Kundu (darkshadows)](https://www.quora.com/profile/Lalit-Kundu) | [Ashish Kedia (ashish1294)](https://www.quora.com/profile/Ashish-Kedia) |  
 | [Johnny Ho (random.johnnyh)](https://www.quora.com/profile/Johnny-Ho) | [Joshua Pan (lonerz)](https://www.quora.com/profile/Joshua-Pan-1) | [Anudeep Nekkanti (anudeep2011)](https://www.quora.com/profile/Anudeep-Nekkanti) |  
 | [Steven Hao (stevenkplus)](https://www.quora.com/profile/Steven-Hao) | [Raziman T.V. (razimantv)](https://www.quora.com/profile/Raziman-T-V) |  |
+ 
+ + [How to prepare for ACM - ICPC? - GeeksforGeeks](http://www.geeksforgeeks.org/how-to-prepare-for-acm-icpc/), by Vishwesh Shrimali 
++ [Getting started with the sport of competitive programming - HackerEarth](https://www.hackerearth.com/practice/notes/getting-started-with-the-sport-of-programming/), by Triveni Mahatha 
 
-
-## Other Awesome Resources
-
-### Articles
-> Informative and helpful articles
-
-| Subject |
-| --- |
-| [Overview of Programming Contests](http://psyho.gg/overview-of-programming-contests/), by Przemysław Dębiak (Psyho) |
-| [The 'science' of training in competitive programming - Codeforces](http://codeforces.com/blog/entry/17842), by Thanh Trung Nguyen (I_love_Hoang_Yen) |
-| [If you ask me how to improve your algorithm competition skill, I will give you the link of this blog. - Codeforces](http://codeforces.com/blog/entry/16599), by Huang I-Wen (dreamoon) |
-| [How to prepare for ACM - ICPC? - GeeksforGeeks](http://www.geeksforgeeks.org/how-to-prepare-for-acm-icpc/), by Vishwesh Shrimali |
-| [Complete reference to competitive programming - HackerEarth](https://www.hackerearth.com/getstarted-competitive-programming/), by Ravi Ojha |
-| [Getting started with the sport of competitive programming - HackerEarth](https://www.hackerearth.com/practice/notes/getting-started-with-the-sport-of-programming/), by Triveni Mahatha |
-
-### Awesome Lists
-> Relevant awesome lists
-
-| Name | Link |
-| --- | --- |
-| C++ Books | [The Definitive C++ Book Guide and List - Stack Overflow](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
-| Algorithms | [tayllan/awesome-algorithms](https://github.com/tayllan/awesome-algorithms) |
-
-### Algo-Courses
 ### Algorithms
 
 - [CS 61B](http://datastructur.es/sp16/) **Data Structures** *UC Berkeley* <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4f9.png" width="20" height="20" alt="Lecture Videos" title="Lecture Videos" /> <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4bb.png" width="20" height="20" alt="Assignments" title="Assignments" /> <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4dd.png" width="20" height="20" alt="Lecture Notes" title="Lecture Notes" /> <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4da.png" width="20" height="20" alt="Readings" title="Readings" />

@@ -12,12 +12,8 @@
 * [Implementations](#implementations)
 * [Language Specifics](#language-specifics)
     * [C/C++](#cc) | [Miscellaneous](#miscellaneous)
-* [Tools](#tools)
-    * [Personal use](#personal-use) | [Contest Preparation](#contest-preparation)
 * [Community](#community)
     * [Blogs](#blogs) | [Youtube and Livestreams](#youtube-and-livestreams) | [Quora](#quora)
-* [Other Awesome Resources](#other-awesome-resources) 
-    * [Articles](#articles)
 
 
 ## List of Lists
@@ -190,33 +186,7 @@ Choose a category (eg. DP) of interest and practice problems on that topic.
 | ★★☆ | [Object-Oriented C Style Languages: C++, Objective-C, Java, C# - a side-by-side reference sheet](http://hyperpolyglot.org/cpp) | A detailed side-by-side reference sheet for common syntaxes. |
 
 
-## Tools
-> Awesome tools that will make your life easier.
-
-### Personal use
-
-| ☆ | Name | Description |
-| --- | --- | --- |
-| ★★★ | [VisuAlgo](https://visualgo.net/en) | A website featuring a large collection of visualization tools for algorithms and data structures. |
-| ★★★ | General Practice Helpers: ... [CHelper](https://plugins.jetbrains.com/plugin/7091-chelper) (IntelliJ IDEA) ([manual](http://codeforces.com/blog/entry/3273)) ... [caide](https://github.com/slycelote/caide) (Visual Studio, CodeLite, standalone command line app) ... [JHelper](http://codeforces.com/blog/entry/13369) (AppCode, CLion) | Great tools that parse contests, inline library codes and provide testing frameworks. They save you from spending your precious time on switching windows and copy-pasting back and forth. |
-| ★★☆ | Codeforces Parsers: ... [Codeforces Parser](https://github.com/johnathan79717/codeforces-parser) ... [GoCF](https://github.com/sukeesh/GoCF) ... [cfparser](https://github.com/gnull/cfparser) (emacs) [cfparser](https://github.com/ikatanic/cfparser) (cli) | These tools parse Codeforces contest problems and help run sample tests. |
-| ★★☆ | [uDebug](https://www.udebug.com/) | A platform that provides expected outputs for user-specified inputs to problems on the UVa Online Judge. Some problems also provide additional test cases for debugging. |
-
-### Contest Preparation
-
-| ☆ | Name | Description |
-| --- | --- | --- |
-| ★★★ | [polygon](https://polygon.codeforces.com/) | polygon provides a platform and a rich set of tools for professional contest preparation. ... An example: [Validators with testlib.h - Codeforces](http://codeforces.com/blog/entry/18426) |
-| ★★☆ | [Graph Editor](https://csacademy.com/app/graph_editor/) | A fantasic tool to create and visualize graphs. |
-| ★★☆ | [tcframe](http://tcframe.org/) | A C++ framework for generating test cases of competitive programming problems. |
-| ★★★ | [Virtual Judge (vjudge)](http://vjudge.net) | Virtual Judge (vjudge) allows users to create virtual contests with problems from notable problem archives. |
-| ★★☆ | [BNU Online Judge](https://www.bnuoj.com/v3/) | BNU Online Judge also allows users to create virtual contests. |
-| ★★☆ | [Kattis](https://open.kattis.com/) | Kattis assists in contest preparation (E-mail them for assistance). |
-
-
 ## Community
-> Meet the god-like competitive programmers!  
-Learn helpful tips, tutorials and insights from these people :)
 
 ### Blogs
 
@@ -269,6 +239,9 @@ Learn helpful tips, tutorials and insights from these people :)
  
  + [How to prepare for ACM - ICPC? - GeeksforGeeks](http://www.geeksforgeeks.org/how-to-prepare-for-acm-icpc/), by Vishwesh Shrimali 
 + [Getting started with the sport of competitive programming - HackerEarth](https://www.hackerearth.com/practice/notes/getting-started-with-the-sport-of-programming/), by Triveni Mahatha 
++ [Virtual Judge (vjudge)](http://vjudge.net) - Virtual Judge (vjudge) allows users to create virtual contests with problems from notable problem archives. 
++ [BNU Online Judge](https://www.bnuoj.com/v3/) - BNU Online Judge also allows users to create virtual contests.
++ [Kattis](https://open.kattis.com/) - Kattis assists in contest preparation (E-mail them for assistance)
 
 ### Algorithms
 

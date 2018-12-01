@@ -8,8 +8,7 @@
 * [Books](#books)
     * [Books for Algorithms](#books-for-algorithms) | [Books for Mathematics](#books-for-mathematics)
 * [Sites for Practice](#sites-for-practice)
-    * [Problem Classifiers](#problem-classifiers) | [Contest Calendars](#contest-calendars)
-* [Sites for Questions](#sites-for-questions)
+    * [Problem Classifiers](#problem-classifiers)
 * [Implementations](#implementations)
 * [Language Specifics](#language-specifics)
     * [C/C++](#cc) | [Java](#java) | [Miscellaneous](#miscellaneous)
@@ -158,29 +157,6 @@ Choose a category (eg. DP) of interest and practice problems on that topic.
 | ★★☆ | [Juniors Training Sheet](https://goo.gl/unDETI), by [Mostafa Saad Ibrahim](https://sites.google.com/site/mostafasibrahim/) | Simple problems for newcomers |
 | ★★☆ | [Lucky貓的 UVA（ACM）園地 (Chinese)](http://luckycat.kshs.kh.edu.tw/) | UVa |
 | ★★☆ | [Topcoder problem archive](https://community.topcoder.com/tc?module=ProblemArchive) | List of problems with categories and complexity levels |
-
-### Contest Calendars
-> Calendars for impending programming contests.  
-(Never miss another contest!)
-
-| ☆ | Name | Description |
-| --- | --- | --- |
-| ★★★ | [Programming Contest Calendar - HackerRank](https://www.hackerrank.com/calendar) | Google Calendar export available |
-| ★★☆ | [clist.by](https://clist.by/) | API available for use |
-| ★★☆ | [Coding Calendar (Android App)](https://play.google.com/store/apps/details?id=com.limitskyapps.CodingCalendar) |  |
-| ★★☆ | [Coder's Calendar](https://github.com/nishanthvijayan/CoderCalendar): [Android App](https://play.google.com/store/apps/details?id=com.corphots.coderscalendar), [Chrome Extension](https://chrome.google.com/webstore/detail/coders-calendar/bageaffklfkikjigoclfgengklfnidll), [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/coder-calendar/) |  |
-| ★★★ | [CodeHorizon](http://codehorizon.star-lord.me/): [iOS App](https://itunes.apple.com/in/app/codehorizon/id925056167?mt=8), [Android App](https://play.google.com/store/apps/details?id=com.chintanghate.CodeHorizon) |  |
-
-
-## Sites for Questions
-> These are great sites to ask questions.  
-Paste your codes at [ideone](https://ideone.com/), [pastebin](https://pastebin.com/) or other sites to avoid formatting issues.
-
-| ☆ | Name | Description |
-| --- | --- | --- |
-| ★★★ | [Codeforces](http://codeforces.com/) | For quick answers, Codeforces is definitely the go-to place to ask about anything competition-related. |
-| ★★★ | [Competitive Programming - Quora](https://www.quora.com/topic/Competitive-Programming) | You would typically get more elaborate answers on Quora, but you might not have your questions answered straightaway. |
-| ★★☆ | [Theoretical Computer Science Stack Exchange](https://cstheory.stackexchange.com/) | This place is generally for the academics, so don't ask questions about contest problems here. |
 
 
 ## Implementations

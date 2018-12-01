@@ -11,7 +11,7 @@
     * [Problem Classifiers](#problem-classifiers)
 * [Implementations](#implementations)
 * [Language Specifics](#language-specifics)
-    * [C/C++](#cc) | [Java](#java) | [Miscellaneous](#miscellaneous)
+    * [C/C++](#cc) | [Miscellaneous](#miscellaneous)
 * [Tools](#tools)
     * [Personal use](#personal-use) | [Contest Preparation](#contest-preparation)
 * [Community](#community)
@@ -186,15 +186,6 @@ Choose a category (eg. DP) of interest and practice problems on that topic.
 | ★★☆ | [C++ Tricks - Codeforces](http://codeforces.com/blog/entry/15643) ... [What are some cool C++ tricks to use in a programming contest? - Quora](https://www.quora.com/Competitive-Programming/What-are-some-cool-C++-tricks-to-use-in-a-programming-contest) | Plentiful C++ tricks for competitive programming. Note that some should be used with care. |
 | ★★★ | [C++ STL: Policy based data structures - Codeforces: Part 1](http://codeforces.com/blog/entry/11080), [Part 2](http://codeforces.com/blog/entry/13279) | Detailed introduction to the extra data structures implemented in GNU C++. The official documentation can be found [here](https://gcc.gnu.org/onlinedocs/libstdc++/ext/pb_ds/). |
 | ★☆☆ | [C++11 FAQ (English, Chinese, Russian, Japanese, Korean)](http://www.stroustrup.com/C++11FAQ.html) | A list of FAQs regarding C++11 collected and written by Bjarne Stroustrup, the creator of C++. |
-
-### Java
-
-| ☆ | Name | Description |
-| --- | --- | --- |
-| ★★☆ | [How to read input in Java — tutorial - Codeforces](http://codeforces.com/blog/entry/7018) | Learn how to read input faster. This is a must-read for those who intend to use Java for competitive programming |
-| ★★☆ | [How to sort arrays in Java and avoid TLE - Codeforces](http://codeforces.com/blog/entry/7108) | Some tips on how to avoid hitting the worst case of quick sort |
-| ★★☆ | [BigNum arithmetic in Java — Let's outperform BigInteger! - Codeforces](http://codeforces.com/blog/entry/17235) | A basic but faster custom BigInteger class |
-| ★★☆ | [EZ Collections, EZ Life (new Java library for contests) - Codeforces](http://codeforces.com/blog/entry/14328) | A Java library for contests written by Alexey Dergunov (dalex). ArrayList, ArrayDeque, Heap, Sort, HashSet, HashMap, TreeSet, TreeMap, TreeList and pair classes are implemented |
 
 ### Miscellaneous
 

@@ -8,7 +8,6 @@
 * [Books](#books)
     * [Books for Algorithms](#books-for-algorithms) | [Books for Mathematics](#books-for-mathematics)
 * [Sites for Practice](#sites-for-practice)
-    * [Problem Classifiers](#problem-classifiers)
 * [Implementations](#implementations)
 * [Language Specifics](#language-specifics)
     * [C/C++](#cc) | [Miscellaneous](#miscellaneous)
@@ -128,16 +127,6 @@
 | ★★☆ | [Russian Code Cup](http://www.russiancodecup.ru/en/) | Programming competitions powered by Mail.Ru Group. Competition consists of 3 qualification, 1 elimination and 1 final rounds. For each round contestants are given 4-8 problems which must be solved in a fixed amount of time. |
 | ★★☆ | [CodeFights](https://codefights.com/) | CodeFights is a website for competitive programming practice and interview preparation. It features daily challenges of varying difficulty, an archive of problems and regular (every 15 minutes) mini-tournaments. Good for beginners. |
 
-### Problem Classifiers
-> Sites classifying programming problems.  
-Choose a category (eg. DP) of interest and practice problems on that topic.
-
-| ☆ | Name | Description |
-| --- | --- | --- |
-| ★★★ | [Problem Classifier](http://problemclassifier.appspot.com/) | SPOJ |
-| ★★☆ | [Lucky貓的 UVA（ACM）園地 (Chinese)](http://luckycat.kshs.kh.edu.tw/) | UVa |
-| ★★☆ | [Topcoder problem archive](https://community.topcoder.com/tc?module=ProblemArchive) | List of problems with categories and complexity levels |
-
 
 ## Implementations
 > Algorithm & Data structure implementations.  
@@ -190,10 +179,6 @@ Choose a category (eg. DP) of interest and practice problems on that topic.
 | Anudeep Nekkanti (anudeep2011) | [Namespace Anudeep ;)](https://blog.anudeep2011.com/) |
 | vexorian (vexorian) | [vexorian's blog](http://www.vexorian.com/) |
 | Ashar Fuadi (fushar) | [Fushar's blog](http://fusharblog.com/) |
-| LiJie Chen (WJMZBMR) | [WJMZBMR (Chinese)](http://wjmzbmr.com/) |
-| Huang I-Wen (dreamoon) | [小月的耍廢日誌 (Chinese)](http://dreamoon4.blogspot.tw/) |
-| Shiang-Yun Yang (morris1028) | [Morris' Blog (Chinese)](http://morris821028.github.io/) |
-| Yuhao Du (TooDifficuIt, TooSimple, xudyh) | [xudyh (Chinese)](http://xudyh.github.io/) |
 
 ### Youtube and Livestreams
 
@@ -228,9 +213,6 @@ Choose a category (eg. DP) of interest and practice problems on that topic.
  
  + [How to prepare for ACM - ICPC? - GeeksforGeeks](http://www.geeksforgeeks.org/how-to-prepare-for-acm-icpc/), by Vishwesh Shrimali 
 + [Getting started with the sport of competitive programming - HackerEarth](https://www.hackerearth.com/practice/notes/getting-started-with-the-sport-of-programming/), by Triveni Mahatha 
-+ [Virtual Judge (vjudge)](http://vjudge.net) - Virtual Judge (vjudge) allows users to create virtual contests with problems from notable problem archives. 
-+ [BNU Online Judge](https://www.bnuoj.com/v3/) - BNU Online Judge also allows users to create virtual contests.
-+ [Kattis](https://open.kattis.com/) - Kattis assists in contest preparation (E-mail them for assistance)
 
 ### Algorithms
 

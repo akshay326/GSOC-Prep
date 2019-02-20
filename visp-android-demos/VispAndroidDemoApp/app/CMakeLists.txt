@@ -4,27 +4,27 @@ cmake_minimum_required(VERSION 3.4.1)
 # i've created a link to the .so files folder
 set(VISP_LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI})
 
-include_directories(/home/akshay/Projects/GSOC/for-android-demo/include)
+include_directories(/home/akshay/Projects/GSOC-Prep/for-android-demo/include)
 
 # VISP
 # -----------------------------
 add_library(visp_detection SHARED IMPORTED )
-set_target_properties(visp_detection PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_detection.so)
+set_target_properties(visp_detection PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_detection.a)
 
 add_library(visp_core SHARED IMPORTED )
-set_target_properties(visp_core PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_core.so)
+set_target_properties(visp_core PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_core.a)
 
 add_library(visp_imgproc SHARED IMPORTED )
-set_target_properties(visp_imgproc PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_imgproc.so)
+set_target_properties(visp_imgproc PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_imgproc.a)
 
 add_library(visp_io SHARED IMPORTED )
-set_target_properties(visp_io PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_io.so)
+set_target_properties(visp_io PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_io.a)
 
 add_library(visp_vision SHARED IMPORTED )
-set_target_properties(visp_vision PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_vision.so)
+set_target_properties(visp_vision PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_vision.a)
 
 add_library(visp_me SHARED IMPORTED )
-set_target_properties(visp_me PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_me.so)
+set_target_properties(visp_me PROPERTIES IMPORTED_LOCATION ${VISP_LIB_DIR}/libvisp_me.a)
 
 # VISP
 # ------------------------------

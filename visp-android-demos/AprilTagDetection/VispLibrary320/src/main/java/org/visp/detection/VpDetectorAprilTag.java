@@ -3,7 +3,8 @@
 //
 package org.visp.detection;
 
-
+import org.visp.core.VpCameraParameters;
+import org.visp.core.VpHomogeneousMatrix;
 
 // C++: class VpDetectorAprilTag
 //javadoc: VpDetectorAprilTag
@@ -18,6 +19,20 @@ public class VpDetectorAprilTag {
     // internal usage only
     public static VpDetectorAprilTag __fromPtr__(long addr) { return new VpDetectorAprilTag(addr); }
 
+    //
+    // C++:  bool getPose(size_t tagIndex, double tagSize, vpCameraParameters cam, vpHomogeneousMatrix cMo)
+    //
+
+    //javadoc: VpDetectorAprilTag::getPose(tagIndex, tagSize, cam, cMo)
+
+    public  boolean getPose(long tagIndex, double tagSize, VpCameraParameters cam, VpHomogeneousMatrix cMo)
+    {
+        
+        boolean retVal = getPose_0(nativeObj, tagIndex, tagSize, cam.nativeObj, cMo.nativeObj);
+        
+        return retVal;
+    }
+                
     //
     // C++:  void setAprilTagNbThreads(int nThreads)
     //
@@ -196,6 +211,9 @@ public class VpDetectorAprilTag {
     }
                 
 
+
+    // C++:  bool getPose(size_t tagIndex, double tagSize, vpCameraParameters cam, vpHomogeneousMatrix cMo)
+    private static native boolean getPose_0(long nativeObj, long tagIndex, double tagSize, long cam_nativeObj, long cMo_nativeObj);
 
     // C++:  void setAprilTagNbThreads(int nThreads)
     private static native void setAprilTagNbThreads_0(long nativeObj, int nThreads);

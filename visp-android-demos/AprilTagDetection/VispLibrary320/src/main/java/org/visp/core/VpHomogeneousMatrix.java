@@ -3,8 +3,11 @@
 //
 package org.visp.core;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.visp.core.VpColVector;
 import org.visp.core.VpHomogeneousMatrix;
+import org.visp.utils.Converters;
 
 // C++: class VpHomogeneousMatrix
 //javadoc: VpHomogeneousMatrix
@@ -393,6 +396,20 @@ public class VpHomogeneousMatrix {
     }
                 
     //
+    // C++: static vpHomogeneousMatrix mean(vector_vpHomogeneousMatrix vec_M)
+    //
+
+    //javadoc: VpHomogeneousMatrix::mean(vec_M_list_arr)
+
+    public static VpHomogeneousMatrix mean(List<VpHomogeneousMatrix> vec_M_list_arr)
+    {
+        long[] vec_M = Converters.vector_vpHomogeneousMatrix_to_Array(vec_M_list_arr);
+        VpHomogeneousMatrix retVal = new VpHomogeneousMatrix(mean_0(vec_M));
+        
+        return retVal;
+    }
+                
+    //
     // C++:  vpRotationMatrix getRotationMatrix()
     //
 
@@ -476,6 +493,9 @@ public class VpHomogeneousMatrix {
 
     // C++:  vpHomogeneousMatrix inverse()
     private static native long inverse_1(long nativeObj);
+
+    // C++: static vpHomogeneousMatrix mean(vector_vpHomogeneousMatrix vec_M)
+    private static native long mean_0(long[] vec_M);
 
     // native support for java toString()
     private static native String toString(long nativeObj);

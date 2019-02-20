@@ -15,7 +15,7 @@ import org.visp.detection.VpDetectorAprilTag;
 import java.io.IOException;
 import java.util.List;
 
-import static example.apriltagdetection.CameraPreviewActivity.updateResult;
+//import static example.apriltagdetection.CameraPreviewActivity.updateResult;
 
 /**
  * Camera preview that displays a {@link Camera}.
@@ -139,7 +139,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
                 break;
         }
 
-        degrees = (degrees + 90)%360;
+//        degrees = (degrees + 90)%360;
 
         int result;
         if (info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
@@ -166,7 +166,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
             Log.d("CameraPreview.java",matrices.size() + " tags detected");
 
             // Turn `data` to bitmap and display
-            updateResult(data);
+//            updateResult(data);
 
             lastTime = System.currentTimeMillis();
         }

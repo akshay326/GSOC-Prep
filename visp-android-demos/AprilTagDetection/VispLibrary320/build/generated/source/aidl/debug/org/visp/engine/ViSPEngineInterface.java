@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /home/akshay/Projects/AndroidStudioProjects/AprilTagDetection/VispLibrary320/src/main/aidl/org/visp/engine/ViSPEngineInterface.aidl
+ * Original file: /home/akshay/Projects/GSOC-Prep/visp-android-demos/AprilTagDetection/VispLibrary320/src/main/aidl/org/visp/engine/ViSPEngineInterface.aidl
  */
 package org.visp.engine;
 /**

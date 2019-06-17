@@ -34,6 +34,7 @@ public class CameraPreviewActivity extends AppCompatActivity {
     private Camera mCamera;
 //    public static ImageView resultImageView;
     static int w,h;
+    static TextView resultInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,7 @@ public class CameraPreviewActivity extends AppCompatActivity {
         } else {
 
             setContentView(R.layout.activity_camera_preview);
+            resultInfo = findViewById(R.id.resultTV);
 
 //            resultImageView = findViewById(R.id.resultImage);
 
@@ -83,6 +85,10 @@ public class CameraPreviewActivity extends AppCompatActivity {
 //
 //        resultImageView.setImageBitmap(bm);
 //    }
+
+    public static void updateResult(String s){
+        resultInfo.setText(s);
+    }
 
     @Override
     public void onPause() {

@@ -40,6 +40,30 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
                 showCameraPreview();
             }
         });
+
+        findViewById(R.id.getTags).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent("android.intent.action.VIEW", android.net.Uri.parse("https://april.eecs.umich.edu/media/apriltag/?C=D;O=D"));
+                startActivity(browserIntent);
+            }
+        });
+
+        findViewById(R.id.project).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent("android.intent.action.VIEW", android.net.Uri.parse("https://summerofcode.withgoogle.com/archive/2018/projects/5711312218750976/"));
+                startActivity(browserIntent);
+            }
+        });
+
+        findViewById(R.id.credits).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent("android.intent.action.VIEW", android.net.Uri.parse("https://www.facebook.com/1996AKS"));
+                startActivity(browserIntent);
+            }
+        });
     }
 
     @Override

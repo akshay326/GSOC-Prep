@@ -1,3 +1,21 @@
+// floyd warshall 
+// all pair shortest paths
+rep(r,0,k)
+    rep(p,0,k)
+        rep(q,0,k)
+	    d[p][q]=min(d[p][q], d[p][r]+d[r][q]);  
+ 
+
+
+
+
+
+
+
+
+
+
+
 // BS Binary Search
 ll lo = 0, hi = n, mi;
 while(lo < hi){
